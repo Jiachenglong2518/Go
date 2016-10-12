@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>折叠选项卡</title>
+    <style >
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none ;
+        }
+        h3{
+            background: gray;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-bottom: solid 2px black;
+        }
+        #menu{
+            width: 120px;
+            border: solid 2px yellow;
+        }
+        .sub-menu{
+            display: none;
+        }
+        .sub-menu li{
+            background-color:deepskyblue;
+            border-bottom:dotted 1px black ;
+
+            text-align: left;
+            text-indent: 5px;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="menu">
+    <li class="main-menu">
+        <h3>中国</h3>
+        <ul class="sub-menu">
+            <li><a href="">黑龙江</a></li>
+            <li><a href="">湖南</a></li>
+            <li><a href="">天津</a></li>
+        </ul>
+    </li>
+    <li  class="main-menu">
+        <h3>美国</h3>
+        <ul class="sub-menu">
+
+            <li><a href="">华盛顿</a></li>
+            <li><a href="">徳克萨斯</a></li>
+            <li><a href="">纽约</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    var oMenu = document.getElementById('menu');
+    var aLi = oMenu.getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++)
+        {
+            if (aLi[i].className =='main-menu')
+                {
+                   aLi[i].onclick = function()
+                   {
+                       var oSubMenu = this.getElementsByTagName('ul')[0];
+                       if (oSubMenu.style.display =='none')
+                       {
+                            oSubMenu.style.display ='block';
+                       }else
+                        {
+                            oSubMenu.style.display ='none';
+                        }
+                   } ;
+                }
+        }
+</script>
+</body>
+</html>
