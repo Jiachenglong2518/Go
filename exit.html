@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head >
     <meta charset="UTF-8">
-    <title></title>
+    <title>多级导航</title>
     <style>
         *{
             padding:0;
@@ -12,11 +12,17 @@
             list-style: none;
             overflow: hidden;//解决塌陷
         }
+        #menu{
+            float: left;
+         }
         #menu a{
             text-decoration: none;
             font-family: 微软雅黑;
             font-size: 22px;
-
+            height: 100%;
+            width: 100%;
+            float: left;
+            line-height: 30px;
 
         }
         #menu li{
@@ -26,23 +32,38 @@
             width: 120px;
             margin-left: 50px;
             text-align: center;
-            line-height: 30px;
+
 
         }
-        #p1{
-            height: 15px;
-            width: 15px;
-
-        }
-
     </style>
 </head>
 <body>
 <ul id="menu">
-    <li ><a href="#"><img src="2.jpg" alt="" id="p1"/>美元</a></li>
-    <li><a href="#">人民币</a></li>
-    <li><a href="#">欧元</a></li>
+    <li class="main-menu">
+        <a href="#">美元</a>
+        <ul class="sub-menu">
+            <li><a href="#">11</a></li>
+            <li><a href="#">110</a></li>
+            <li><a href="#">1100</a></li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <a href="#">人民币</a>
+        <ul class="sub-menu">
+            <li><a href="#">1</a></li>
+            <li><a href="#">110</a></li>
+            <li><a href="#">100</a></li>
+        </ul>
+    </li>
+    <li class="main-menu">
+        <a href="#">欧元</a>
+        <ul class="sub-menu">
+            <li><a href="#">11</a></li>
+            <li><a href="#">110</a></li>
+            <li><a href="#">1100</a></li>
+        </ul>
+    </li>
 </ul>
-<h1>jiahcenglong</h1>
+
 </body>
 </html>
