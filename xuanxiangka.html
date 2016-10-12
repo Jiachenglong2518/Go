@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #big{
+            width: 400px;
+            height: 300px;
+            margin: 100px auto;
+            border: dashed 1px red;
+        }
+        #small{
+            background-color: gray;
+            width: 400px;
+            height: 270px;
+            border-top: dotted 1px black;
+        }
+        #menu{
+            height: 30px ;
+        }
+        
+        #menu li{
+            float: left;
+            height: 30px;
+            width: 100px;
+            background-color: gray;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+            
+        }
+         #big #menu .tab1{
+            background-color: black;
+            color:white;
+        }
+        #small
+        {
+            text-align:center;
+            line-height: 270px;
+            font-size: 50px;
+            color: darkslategray;
+        }
+    </style>
+</head>
+<body>
+<div id="big">
+    <ul id="menu">
+        <li class="tab1">js</li>
+        <li>html</li>
+        <li>css</li>
+    </ul>
+    <div id="small">
+        111
+    </div>
+</div>
+
+<script>
+    var aLi = document.getElementsByTagName('li');
+    var oSmall = document.getElementById('small');
+    var data = ['别墅','跑车','Money'];
+    for(i=0;i<aLi.length;i++)
+        {
+            aLi[i].index = i;
+            aLi[i].onclick = function ()
+            {
+                for(i=0;i<aLi.length;i++)
+                {
+                    aLi[i].className = '';
+                }
+                this.className = 'tab1';
+                oSmall.innerHTML = data[this.index];
+            }
+
+
+        }
+</script>
+</body>
+</html>
+
+
+
+<!--<script>
+    var aLi = document.getElementsByTagName('li');
+    var oSmall = document.getElementById('small');
+    var data = ['100万','1000万',"1亿"]
+    for(var i= 0;i<aLi.length;i++)
+        {
+            aLi[i].index = i;
+            aLi[i].onclick = function()
+                {
+
+                    for(var i= 0;i<aLi.length;i++)
+                    {
+                        aLi[i].className = '';
+                    }
+                    this.className = 'tab1';
+                    oSmall.innerHTML = data[this.index]
+                };
+        }
+</script>-->
+
+
+
+
+
+
+
+
+<!--<script>
+    var aLi = document.getElementsByTagName('li');
+    var oSmall = document.getElementById('small');
+    var data = [111,22222,3333];
+    for( var i=0;i<aLi.length;i++)
+        {
+            aLi[i].index = i
+            aLi[i].onclick = function()
+                {
+                    for(var i=0;i<aLi.length;i++)
+                        {
+                            aLi[i].className = '';
+                        }
+                    this.className = 'tab1';
+                    oSmall.innerHTML=data[this.index];
+                }
+        }
+</script>-->
