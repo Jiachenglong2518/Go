@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        #big{
+            position: relative;
+            margin: 200px  auto;
+            height: 382px;
+            width: 680px;
+            border: dashed 1px black;
+        }
+        #menu{
+            position: absolute;
+            right: 15px;
+            bottom: 8px;
+        }
+        #menu  #tab{
+            height: 15px;
+        }
+        #menu #tab li{
+            float: left;
+            background-color: black;
+            margin-right: 3px;
+            width: 20px;
+            height: 15px;
+            color: white;
+            text-align: center;
+            line-height: 15px;
+            cursor: pointer;
+
+        }
+        #move{
+            position: absolute;
+            left: 15px;
+            bottom: 8px;
+        }
+        #move span{
+            float: left;
+            background-color: black;
+            height: 15px;
+            width:20px;
+            margin-right: 3px;
+            color: white;
+            text-align: center;
+            line-height: 15px;
+            cursor: pointer;
+        }
+        #pic .selected{
+            display: block;
+        }
+        #pic img{
+            display: none;
+        }
+        #menu #tab .selected{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="big">
+        <div id="menu">
+            <ul id="tab">
+                <li class="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div id="pic">
+            <img class="selected" src="img/1.png" alt=""/>
+            <img src="img/2.png" alt=""/>
+            <img src="img/3.png" alt=""/>
+            <img src="img/4.png" alt=""/>
+        </div>
+        <div id="move">
+            <span id="prop">&lt;</span>
+            <span id="next">&gt;</span>
+        </div>
+    </div>
+    <script>
+        var oTab = document.getElementById("tab");
+        var aLi = oTab.getElementsByTagName("li");
+        var oPic = document.getElementById("pic");
+        var aImg =oPic.getElementsByTagName("img");
+        var oMove =document.getElementById("move");
+        var oProp = document.getElementById("prop");
+        var oNext = document.getElementById("next");
+        var oBig = document.getElementById("big");
+
+        var iNow=0;
+
+                for(var i=0;i<aLi.length;i++)
+                    {
+                        aLi[i].index =i;
+                        aLi[i].onmousemove = function()
+                        {
+                             iNow = this.index;
+                             change(iNow);
+
+                        }
+                    };
+
+                oNext.onclick = function()
+                    {
+                        iNow = iNow + 1;
+                        if(iNow == aLi.length)
+                            {
+                                iNow =0;
+                            }
+                        else{}
+                        change(iNow);
+                    };
+                oProp.onclick = function()
+                    {
+                        iNow--;
+                        if(iNow == -1)
+                            {
+                                iNow =aLi.length-1;
+                            }
+                        else{}
+                        change(iNow);
+                    };
+                var timer = setInterval(function()
+                    {
+                        oNext.onclick();
+                    }
+                    ,1000);
+                oBig.onmouseover = function()
+                    {
+                       clearInterval(timer);
+                    };
+                oBig.onmouseout = function ()
+                    {
+                        timer = setInterval(function()
+                        {
+                            oNext.onclick();
+                        },1000)
+                    };
+
+
+
+                function change(x)
+                    {
+                        for (var i = 0; i < aLi.length; i++)
+                        {
+                            aLi[i].className = "";
+                            aImg[i].className="";
+                        }
+                        aLi[x].className = "selected";
+                        aImg[x].className= "selected";
+                    }
+
+    </script>
+
+</body>
+</html>
