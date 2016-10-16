@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获取坐标</title>
+    <style >
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #conter{
+            background-color: gray;
+            width: 200px;
+            height: 150px;
+            position: absolute;
+        }
+        #big{
+            position: relative;
+            left: 200px;
+            top: 200px;
+            background-color: red;
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="big">
+    <div id="conter">
+
+    </div>
+</div>
+    <script class="">
+        var oDiv = document.getElementById("conter");
+        oDiv.onclick= function(e){
+            e = e||window.event;
+            console.log(e.clientX);
+        }
+    </script>
+</body>
+</html>
