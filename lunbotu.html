@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #area{
+            width: 680px;
+            height: 382px;
+            position: relative;
+            margin: 100px auto;
+            border: dashed 1px black;
+        }
+        #menu ul{
+            height: 20px;
+        }
+        #menu li{
+            float: left;
+            width: 25px;
+            height: 20px;
+            margin-right: 2px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+
+        }
+        #tab{
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+        }
+        #menu .selected{
+            background-color: orange;
+        }
+
+        #change{
+            position: absolute;
+            left: 20px;
+            bottom: 5px;
+
+        }
+        #pic .selected{
+            display: block;
+        }
+        #pic img{
+            display: none;
+        }
+        span{
+             float: left;
+             background-color: black;
+             margin-right: 2px;
+             color: white;
+             width: 25px;
+             height: 20px;
+             text-align: center;
+             line-height: 20px;
+             cursor: pointer;
+         }
+    </style>
+
+</head>
+<body>
+<div id="area">
+    <div id="tab">
+        <ul id="menu">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div id="pic">
+        <img  class="selected" src="img/1.png" alt=""/>
+        <img src="img/2.png" alt=""/>
+        <img src="img/3.png" alt=""/>
+        <img src="img/4.png" alt=""/>
+
+
+    </div>
+    <div id="change">
+        <span id="prev"> &lt; </span>
+        <span id="next"> &gt;  </span>
+    </div>
+</div>
+<script>
+    var oUl = document.getElementById('menu');
+    var aLi = oUl.getElementsByTagName('li');
+    var oDiv = document.getElementById('pic');
+    var aImg = oDiv.getElementsByTagName('img');
+    var oNext = document.getElementById('next');
+    var iNow = 0;
+    var oPrev = document.getElementById('prev');
+    var oArea = document.getElementById('area' );
+
+    for(var i=0;i<aLi.length;i++)
+    {
+
+            aLi[i].index=i;
+            aLi[i].onmouseover = function()
+            {
+                iNow = this.index;
+              /*  for(i=0;i<aLi.length;i++)
+                {
+
+                    aLi[i].className ='';
+                    aImg[i].className ='';
+                }
+                this.className = 'selected';
+                aImg[this.index].className = 'selected';*/
+                change();
+
+            }   ;
+            oNext.onclick = function()
+            {
+
+                iNow = iNow+1;
+                if(iNow == aLi.length)
+                {
+                    iNow=0;
+                }
+
+                change();
+            };
+            oPrev.onclick = function()
+                {
+                    iNow=iNow-1;
+                    if(iNow == -1)
+                    {
+                        iNow =aLi.length-1;
+                    }
+                    change();
+                };
+        function change()
+        {
+            for(var i=0;i<aLi.length;i++)
+            {
+                aLi[i].className ='';
+                aImg[i].className ='';
+            }
+            aLi[iNow].className ='selected';
+            aImg[iNow].className ='selected';
+        }
+
+
+
+
+    }
+
+        var timer;
+        function run()
+            {
+                timer = setInterval(function()
+                {
+                    oNext.onclick();
+                },1000);
+            }
+        run();
+
+        oArea.onmouseout = function()
+             {
+                 run();
+             };
+        oArea.onmouseover = function()
+             {
+                 clearInterval(timer);
+             };
+</script>
+</body>
+</html>
