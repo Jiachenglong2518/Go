@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .area{
+            width: 400px;
+            height: 300px;
+            border: solid 1px black;
+            margin: 100px auto;
+        }
+        #txt{
+            background-color: gray;
+            width: 400px;
+            height: 270px;
+            text-align: center;
+            line-height: 270px;
+            font-size: 30px;
+        }
+        .area ul{
+            height: 30px;
+        }
+        #tab li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            background-color: burlywood;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #tab .tab{
+            background: black;
+            color: white;
+        }
+        #txt div{
+            display: none;
+        }
+        #txt div.tab{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="area">
+    <ul id="tab">
+        <li class="tab"><a >起点</a></li>
+        <li><a >逐浪</a></li>
+        <li><a >17k</a></li>
+    </ul>
+
+    <div id="txt">
+        <div class="tab">1111</div>
+        <div>2222</div>
+        <div>3333</div>
+    </div>
+</div>
+<!--
+<script>
+    var oTab = document.getElementById('tab');
+
+    var aLi = oTab.getElementsByTagName('li');
+    var oTxt = document.getElementById('txt');
+    var data =['唐家三少','天蚕土豆','辰东']
+    var aDiv =oTxt.getElementsByTagName('div');
+    console.log(aLi);
+    for(i=0;i<aLi.length;i++)
+    {
+        aLi[i].index = i;
+        aLi[i].onclick = function()
+        {
+            for(i=0;i<aLi.length;i++)
+            {
+                aLi[i].className = '';
+                aDiv[i].className = '';
+            }
+            this.className ='tab';
+            aDiv[this.index].className = 'tab';
+
+        };
+    }
+</script>
+-->
+<script>
+    var oTab = document.getElementById('tab');
+    var aLi = oTab.getElementsByTagName('li');
+    var oTxt = document.getElementById('txt');
+    var aDiv = oTxt.getElementsByTagName('div');
+
+    for(i=0;i<aLi.length;i++)
+    {
+        aLi[i].index = i;
+        aLi[i].onclick = function()
+        {
+            for(i=0;i<aLi.length;i++)
+            {
+                aDiv[i].className = '';
+                aLi[i].className ='';
+            }
+
+            aDiv[this.index].className = 'tab';
+            this.className = 'tab';
+        };
+
+    }
+</script>
+</body>
+</html>
