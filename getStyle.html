@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <script>
+        var oDiv1 =document.getElementById("div1");
+        console.log(getStyle(oDiv1,"height"));
+
+
+        function getStyle(elem,prop)
+                    {
+                        if(window.getComputedStyle)
+                            {
+                                return window.getComputedStyle(elem,null)[prop];
+                            }
+                        else if(elem.currentStyle)
+                            {
+                                return elem.currentStyle[prop];
+                            }
+                    }
+    </script>
+</body>
+</html>
