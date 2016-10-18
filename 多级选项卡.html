@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多级选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul {
+           list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #menu{
+            height: 35px;
+        }
+
+        
+        .main-menu{
+            float: left;
+            width: 220px;
+            height: 30px;
+            background-color: gray;
+            margin-right: 3px;
+            text-indent: 3px;
+        }
+        .main-menu:hover{
+
+        }
+        #menu .main-menu a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            line-height: 30px;
+
+        }
+        #menu .main-menu li{
+            width: 220px;
+            height: 30px;
+            background-color: lightgray;
+            border-bottom: dashed 1px greenyellow;
+
+
+        }
+        #menu .main-menu .sub-main{
+            display: none;
+        }
+        #menu .sub-main li{
+
+            line-height: 30px;
+            text-indent: 3px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu" >
+        <li class="main-menu">
+            <a href="">唐家三少</a>
+            <ul class="sub-main">
+                <li>绝世唐门</li>
+                <li>空速星恒</li>
+                <li>神印王座</li>
+            </ul>
+        </li>
+        <li class="main-menu">
+            <a href="">辰东</a>
+            <ul class="sub-main">
+                <li>神墓辰南</li>
+                <li>不死不灭</li>
+                <li>完美世界</li>
+            </ul>
+        </li>
+        <li class="main-menu">
+            <a href="">天蚕土豆</a>
+            <ul class="sub-main">
+                <li>斗破苍穹</li>
+                <li>魔兽剑圣</li>
+                <li>武动乾坤</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var oMenu =document.getElementById("menu");
+        var aLi =document.getElementsByTagName("li");
+
+        for(i=0;i<aLi.length;i++)
+            {
+                if(aLi[i].className="main-menu")
+                    {
+                        aLi[i].onmouseover=function()
+                            {
+                                var oSubMenu = this.getElementsByTagName("ul")[0];
+                                oSubMenu.style.display = "block";
+                            };
+                        aLi[i].onmouseout = function()
+                            {
+                                var oSubMenu = this.getElementsByTagName("ul")[0];
+                                oSubMenu.style.display = "none";
+                            }
+                    }
+            }
+    </script>
+</body>
+</html>
