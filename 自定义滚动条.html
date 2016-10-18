@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 400px ;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        #content{
+            width: 380px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: gray;
+
+
+        }
+        #scroll-lin{
+            width: 20px;
+            height: 500px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: lightgray;
+        }
+        #scroll-btn{
+            width: 20px;
+            height: 20px;
+            background-color:lawngreen;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">1、评估中心网发核对本学期教学任务书中任课教师信息的通知
+            2、主管教学院长（主任）组织教务员核对本学期教学任务书中任课教师信息
+            3、教务处向评估中心提供院（部）核对后的本学期学生选课结果
+            4、七个实验学院主管教学院长（主任）、教务员组织实验教师填写本学期参加评教的实验课程信息，并与学生选课结果进行核对，划分开理论课和实验课系列评教信息
+            5、评估中心整理数据并与网络中心一同将数据导入学生网上评教数据库，网络中心负责系统的安全运行
+            6、评估中心网发本学期学生网上评教通知
+            7、学院主管学生工作书记对学生评教进行宣传动员、指导和协调，安排辅导员组织学生上网评教
+            8、教务处向评估中心提供本学期缺考、旷考、消考、免听学生名单
+            9、学院主管教学院长（主任）、教务员组织教师填报本学期学生上课缺勤率≥30%信息
+            10、评估中心进行学生评教数据处理、统计并将结果反馈到院（部），主管教学院长（主任）再次核对评教结果中的课程和教师信息
+            11、评估中心将核对后的评教结果反馈至院（部）
+            12、院（部）主管教学院长（主任）组织教务员将评教结果交至教师本人
+            1、评估中心网发核对本学期教学任务书中任课教师信息的通知
+            2、主管教学院长（主任）组织教务员核对本学期教学任务书中任课教师信息
+            3、教务处向评估中心提供院（部）核对后的本学期学生选课结果
+            4、七个实验学院主管教学院长（主任）、教务员组织实验教师填写本学期参加评教的实验课程信息，并与学生选课结果进行核对，划分开理论课和实验课系列评教信息
+            5、评估中心整理数据并与网络中心一同将数据导入学生网上评教数据库，网络中心负责系统的安全运行
+            6、评估中心网发本学期学生网上评教通知
+            7、学院主管学生工作书记对学生评教进行宣传动员、指导和协调，安排辅导员组织学生上网评教
+            8、教务处向评估中心提供本学期缺考、旷考、消考、免听学生名单
+            9、学院主管教学院长（主任）、教务员组织教师填报本学期学生上课缺勤率≥30%信息
+            10、评估中心进行学生评教数据处理、统计并将结果反馈到院（部），主管教学院长（主任）再次核对评教结果中的课程和教师信息
+            11、评估中心将核对后的评教结果反馈至院（部）
+            12、院（部）主管教学院长（主任）组织教务员将评教结果交至教师本人
+            1、评估中心网发核对本学期教学任务书中任课教师信息的通知
+            2、主管教学院长（主任）组织教务员核对本学期教学任务书中任课教师信息
+            3、教务处向评估中心提供院（部）核对后的本学期学生选课结果
+            4、七个实验学院主管教学院长（主任）、教务员组织实验教师填写本学期参加评教的实验课程信息，并与学生选课结果进行核对，划分开理论课和实验课系列评教信息
+            5、评估中心整理数据并与网络中心一同将数据导入学生网上评教数据库，网络中心负责系统的安全运行
+            6、评估中心网发本学期学生网上评教通知
+            7、学院主管学生工作书记对学生评教进行宣传动员、指导和协调，安排辅导员组织学生上网评教
+            8、教务处向评估中心提供本学期缺考、旷考、消考、免听学生名单
+            9、学院主管教学院长（主任）、教务员组织教师填报本学期学生上课缺勤率≥30%信息
+            10、评估中心进行学生评教数据处理、统计并将结果反馈到院（部），主管教学院长（主任）再次核对评教结果中的课程和教师信息
+            11、评估中心将核对后的评教结果反馈至院（部）
+            12、院（部）主管教学院长（主任）组织教务员将评教结果交至教师本人
+        </div>
+        <div id="scroll-lin">
+            <div id="scroll-btn"></div>
+        </div>
+    </div>
+   <!-- <script>
+        var oBtn = document.getElementById("scroll-btn");
+        var oLin = document.getElementById("scroll-lin");
+        var oContent =document.getElementById("content");
+        var oContainer = document.getElementById("container");
+        oBtn.onmousedown = function(e)
+            {
+                e = e || window.event();
+                var yDis= e.clientY -oBtn.offsetTop;
+                document.onmousemove = function(e)
+                    {
+                        e = e || window.event();
+                        var top = e.clientY -yDis +"px";
+                        //console.log(oLin.offsetHeight);
+                        if(top >oLin.offsetHeight-oBtn.offsetHeight)
+                            {
+                                top =oLin.offsetHeight-oBtn.offsetHeight;
+                            }
+                        else if(top <0)
+                            {
+                               top =0;
+                            }
+
+                       oBtn.style.top= e.clientY -yDis +"px";
+                       var fScal = oBtn.style.top/(oLin.offsetHeight-oBtn.offsetHeight);
+                       oContent.style.top =-(oContent.offsetHeight-oContainer.offsetHeight)*fScal+"px";
+                       return false;
+                    };
+                document.onmouseup = function()
+                    {
+                        document.onmousemove = null;
+                    };
+            };
+    </script>-->
+    <script>
+        var oBtn = document.getElementById("scroll-btn");
+        var oLin = document.getElementById("scroll-lin");
+        var oContent =document.getElementById("content");
+        var oContainer = document.getElementById("container");
+        oBtn.onmousedown = function(e)
+            {
+
+                var iDisY = e.clientY -oBtn.offsetTop;
+                document.onmousemove = function(e)
+                    {
+                        e = e ||window.event;
+                        var top = e.clientY -iDisY ;
+                        if (top<0)
+                            {
+                                top=0;
+                            }
+                        if(top>oLin.offsetHeight-oBtn.offsetHeight)
+                            {
+                                top=oLin.offsetHeight-oBtn.offsetHeight;
+                            }
+
+                        oBtn.style.top =top+"px";
+                        var fVal =top/(oLin.offsetHeight-oBtn.offsetHeight);
+                        console.log(oContent.offsetHeight - oContainer.offsetHeight);
+                        console.log(oContent.offsetHeight);
+                        console.log(oContainer.offsetHeight);
+                        oContent.style.top = -(oContent.offsetHeight - oContainer.offsetHeight)*fVal+"px";
+                        return false;
+                    };
+                document.onmouseup = function()
+                    {
+                        document.onmousemove =null;
+                    };
+
+            }
+    </script>
+</body>
+</html>
