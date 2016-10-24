@@ -8,13 +8,78 @@
             margin: 0;
             padding: 0;
         }
+        ul {
+            list-style: none;
+        }
+
+        #container{
+            width: 680px;
+            height: 382px;
+            position: relative;
+            top: 100px;
+            left: 200px;
+            border: dashed 1px;
+        }
+        #tab{
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
+            z-index: 1;
+        }
+        #change{
+            position: absolute;
+            left: 15px;
+            bottom:5px;
+            height: 15px;
+        }
+        #pic{
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 680px;
+            height: 382px;
+        }
+        #pic img{
+            display: none;
+        }
+        #pic .selected{
+            display: block;
+        }
+        #tab ul{
+            height: 15px;
+        }
+        #tab li{
+            background-color: black;
+            color: white;
+            float: left;
+            width: 20px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            margin-right: 2px;
+            cursor: pointer;
+        }
+        #tab .selected{
+            background-color: lightpink;
+        }
+        span{
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 20px;
+            height: 15px;
+            line-height: 15px;
+            float: left;
+            margin-right: 3px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="tab">
             <ul>
-                <li>1</li>
+                <li class="selected">1</li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
@@ -22,19 +87,90 @@
 
         </div>
         <div id="pic">
-            <img src="img/1.png" alt=""/>
+            <img src="img/1.png" alt="" class="selected"/>
             <img src="img/2.png" alt=""/>
             <img src="img/3.png" alt=""/>
             <img src="img/4.png" alt=""/>
         </div>
         <div id="change">
-            <span id="next">&lt;</span>
-            <span id="prep">&gt;</span>
-        </div>>
+            <span id="prep">&lt;</span>
+            <span id="next">&gt;</span>
+        </div>
 
 
 
     </div>
+    <script>
+        var oContainer=document.getElementById("container");
+        var oTab =document.getElementById("tab");
+        var aLi =oTab.getElementsByTagName("li");
+        var oPic = document.getElementById("pic");
+        var aImg= oPic.getElementsByTagName("img");
+        var oNext = document.getElementById("next");
+        var oPrep =document.getElementById("prep");
+        var iNow=0;
 
+        for(var i=0;i<aLi.length;i++)
+            {
+                aLi[i].index = i;
+                aLi[i].onmousemove = function ()
+                    {
+                        iNow = this.index;
+                        changeImg(iNow);
+                    }
+
+            }
+        oNext.onclick =function()
+            {
+               iNow++;
+                if(iNow==aLi.length)
+                    {
+                        iNow=0;
+                    }
+                changeImg(iNow);
+            };
+        oPrep.onclick =function()
+            {
+                iNow--;
+                if (iNow==-1)
+                    {
+                        iNow=aLi.length-1;
+                    }
+                changeImg(iNow);
+            };
+        var timer =setInterval(function()
+                {
+                    oNext.onclick();
+                }
+
+                ,1000);
+        oContainer.onmouseover =function()
+            {
+               clearInterval(timer);
+            };
+        oContainer.onmouseout =function()
+            {
+                timer =setInterval(function()
+                        {
+                            oNext.onclick();
+                        }
+
+                        ,1000);
+            };
+
+
+
+
+        function changeImg(x)
+            {
+                for(var i=0;i<aLi.length;i++)
+                {
+                    aLi[i].className ="";
+                    aImg[i].className="";
+                }
+                aLi[x].className ="selected";
+                aImg[x].className="selected";
+            }
+    </script>
 </body>
 </html>
