@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡jq</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .area{
+            width: 400px;
+            height: 300px;
+            border: solid 1px black;
+            margin: 100px auto;
+        }
+        #txt div{
+            background-color: gray;
+            width: 400px;
+            height: 270px;
+            text-align: center;
+            line-height: 270px;
+            font-size: 30px;
+        }
+        .area ul{
+            height: 30px;
+        }
+        #tab li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            background-color: burlywood;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #tab .tab{
+            background: black;
+            color: white;
+        }
+        #txt div{
+            display: none;
+        }
+        #txt div.tab{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <ul id="tab">
+            <li class="tab"><a >起点</a></li>
+            <li><a >逐浪</a></li>
+            <li><a >17k</a></li>
+        </ul>
+
+        <div id="txt">
+            <div class="tab">1111</div>
+            <div>2222</div>
+            <div>3333</div>
+        </div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function()
+        {
+            $("li").on("click",function()
+            {
+                $(this).prop("class","tab").siblings().removeClass("tab");
+                $("#txt div").eq($(this).index()).addClass("tab").siblings().removeClass("tab");
+            })
+        });
+
+    </script>
+</body>
+</html>
