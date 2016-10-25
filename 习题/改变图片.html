@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input{
+            margin-left: 350px;
+        }
+        div{
+            margin-top: 5px;
+            margin-left: 150px;
+        }
+        img{
+            display: none;
+        }
+        .selected{
+            display: block;
+        }
+        #tip{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input id="input" type="text"/>
+    <select name="" id="content">
+        <option id="tip" value="../轮播图/img/3.png">--请选择--</option>
+        <option value="../轮播图/img/1.png">&nbsp;&nbsp;女枪</option>
+        <option value="../轮播图/img/2.png">&nbsp;&nbsp;男枪</option>
+        <option value="../轮播图/img/3.png">&nbsp;&nbsp;寒冰</option>
+
+    </select>
+    <div>
+        <img src="../轮播图/img/1.png" class="selected" alt="" id="img"/>
+
+    <script>
+        var oInput=document.getElementById("input");
+        var aOption=document.getElementsByTagName("option");
+        var oSelect=document.getElementById("content");
+        var oImg=document.getElementById("img");
+        oSelect.onchange=function()
+        {
+            for( var i=0;i<aOption.length;i++)
+            {
+                aOption[i].index=i;
+
+                if(aOption[i].selected)
+                {
+                    console.log(i);
+                    oInput.value=aOption[i].value;
+                    oImg.src=aOption[i].value;
+
+
+                }
+            }
+        };
+        /*5、改变下拉列表框显示图片，并显示在文本框中。*/
+
+    </script>
+</body>
+</html>

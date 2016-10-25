@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阶乘</title>
+</head>
+<body>
+    <div id="div4">
+        <span>4</span>
+        <input type="text" value="十的阶乘" id="jie-cheng"/>
+        <button id="ji">计算</button>
+        <button id="jia">1!+2!+3!+…..＋10！</button>
+    </div>
+    <script>
+        var oButton =document.getElementById("ji");
+        var oJieCheng=document.getElementById("jie-cheng");
+        var oJia= document.getElementById("jia");
+
+
+        oButton.onclick=function()
+            {
+                var a=1;
+                for(var i=1;i<11;i++)
+                    {
+
+                        a=a*i;
+                    }
+                oJieCheng.value=a;
+            };
+        oJia.onclick=function()
+            {
+                var e=1;
+                var d=0;
+                for(var i=1;i<11;i++)
+                    {
+                        e=e*i;
+                        d=d+e;
+                    }
+                oJieCheng.value=d;
+            };
+    </script>
+</body>
+</html>

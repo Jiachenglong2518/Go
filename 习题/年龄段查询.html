@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>年龄段</title>
+
+</head>
+<body>
+    <div id="div3">
+
+        <input type="text" id="age" value="请输入年龄" />
+        <button id="put—age">提交</button>
+        <!--<input type="text" id="man" value="所处的年龄段"/>-->
+        <button id="man">所处的年龄段</button>
+    </div>
+    <script>
+        var oInPut =document.getElementById("age");
+        var oPutAge =document.getElementById("put—age");
+        var oMan =document.getElementById("man");
+        var a;
+        console.log(oMan.value+"1");
+        console.log(oInPut.value+"2");
+
+        oPutAge.onclick=function()
+        {
+
+            a=oInPut.value;
+
+            console.log(a);
+            console.log(oMan.innerHTML+"3");
+            console.log(oInPut.value+"4");
+
+
+            if(a<14)
+            {
+                oMan.innerHTML="儿童";
+            }
+             if(a>=14&&a<24)
+            {
+                oMan.innerHTML="青少年";
+            }
+             if( a>=24&&a<40)
+            {
+                oMan.innerHTML="青年";
+            }
+            if( a>=40&&a<60)
+            {
+                oMan.innerHTML = "中年";
+            }
+            if(a>60)
+            {
+                oMan.innerHTML="老年";
+            }
+
+            console.log(oInPut.value+"5");
+        };
+        oInPut.onclick= function() {
+            oInPut.value = "";
+        };
+    </script>
+</body>
+</html>

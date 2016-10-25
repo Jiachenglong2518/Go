@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            border: dashed 1px;
+            height: 30px;
+            /*text-align: center;
+            line-height: 65px;*/
+            margin-bottom: 5px;
+        }
+         #div1 span{
+            text-indent: 10px;
+
+        }
+        #div3{
+            border: dashed 1px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+        <!--1．随机生成两个小数给变量x.y，然后显示这两个数中的最大值。
+        （提示：语句“var x=Math.random();”可为变量生成一个随机小数：
+        另外，使用条件运算符‘'?:")-->
+    <div id="div1">
+        <span>1 比较两个随机数大小</span>
+        <button id="b1"></button>
+        <button id="b2"></button>
+        <button id="b3">显示答案</button>
+    </div>
+    <div id="div3">
+        <span>3</span>
+        <input type="text" id="age" value="请输入年龄" />
+        <button id="put—age">提交</button>
+        <!--<input type="text" id="man" value="所处的年龄段"/>-->
+        <button id="man">所处的年龄段</button>
+    </div>
+    <div id="div4">
+        <span>4</span>
+        <input type="text" value="十的阶乘" id="jie-cheng"/>
+        <button id="ji">计算</button>
+    </div>
+    <script>
+        var b1=document.getElementById("b1");
+        var b2=document.getElementById("b2");
+        var b3=document.getElementById("b3");
+        var oInPut =document.getElementById("age");
+        var oPutAge =document.getElementById("put—age");
+        var oMan =document.getElementById("man");
+
+        var x=Math.random();
+        var y=Math.random();
+        b1.innerHTML=x;
+        b2.innerHTML=y;
+
+
+        if(x>y)
+            {
+               b3.innerHTML=x;
+            }
+        if(x<y)
+            {
+                b3.innerHTML=y;
+            }
+       /* 2．如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，
+        那么这一年就是闰年。请编制一个页面，该页面显示当天是否处于闰年。*/
+        var today =new Date();
+        var year =1600;
+        console.log(year);
+        if((year%4==0 && year%100!=0)||year%400==0)
+            {
+              console.log("闰年");
+            }
+
+        else{
+            console.log("不是闰年")
+        }
+       /* 1.	编写程序．通过用户输入的年龄判断是哪个年龄段的人
+        （儿童：年龄＜14；青少年：14<=年龄＜24；青年：24<年龄＜40; 中年：40＜=年龄＜60;
+        老年：年龄>=60），并在页面上输出判断结果。*/
+        var a;
+        console.log(oMan.value+"1");
+        console.log(oInPut.value+"2");
+
+        oPutAge.onclick=function()
+            {
+
+               a=oInPut.value;
+
+               console.log(a);
+                console.log(oMan.innerHTML+"3");
+                console.log(oInPut.value+"4");
+
+
+
+                if(a<14)
+                {
+                    oMan.innerHTML="儿童";
+                }
+                if(a>=14&&a<24)
+                {
+                    oMan.innerHTML="青少年";
+                }
+                if( a>=24&&a<40)
+                {
+                    oMan.innerHTML="青年";
+                }
+                if( a>=40&&a<60)
+                {
+                    oMan.innerHTML = "中年";
+                }
+                if(a>60)
+                {
+                    oMan.innerHTML="老年";
+                }
+
+                console.log(oInPut.value+"5");
+            };
+        oInPut.onclick= function(){
+
+                oInPut.value="";
+            };
+        /*使得阶乘*/
+        var oButton =document.getElementById("ji");
+        var oJieCheng=document.getElementById("jie-cheng");
+        var b=1;
+        oButton.onclick=function()
+        {
+
+            for(var i=1;i<11;i++)
+            {
+
+                b=b*i;
+            }
+            oJieCheng.value=b;
+        };
+        var s1=parseInt("“101中学");
+        document.write(s1);
+
+        /*  4.	编写程序，计算 1!+2!+3!+…..＋10！的结果。*/
+
+
+
+
+
+
+
+
+
+
+      /*  2.	编写程序，艰据用户输入的一个数字(0~6)．
+        通过警示对话框显示对应的星期几(0: 星期日; 1: 星期一;……6: 星期六;)。*/
+    </script>
+        <!--/* switch (true)
+        {
+        case age<14:
+        oMan.value="儿童";
+        break;
+        case 14<=age<24:
+        oMan.value="青少年";
+        console.log(oMan.value);
+        break;
+        case 24<age<40:
+        oMan.value="青年";
+        break;
+        case 40<=age<60:
+        oMan.value="中年";
+        console.log(oMan.value);
+        break;
+        case age>60:
+        oMan.value="老年";
+        default :
+        oMan.value="输入不合法"
+        }*/-->
+</body>
+
+</html>

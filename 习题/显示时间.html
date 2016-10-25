@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="showTime()">
+    <p>
+        现在是 <a id="year"></a>年
+        <a id="month"></a>月
+        <a id="day"></a>日
+        <a id="hours"></a>点
+        <a id="min" ></a>分
+        <a id="sec"></a>秒
+    </p>
+    <script>
+        var oYear= document.getElementById("year"),
+            oMonth=document.getElementById("month"),
+            oDay =document.getElementById("day"),
+            oMin=document.getElementById("min"),
+            oHours=document.getElementById("hours"),
+            oSec=document.getElementById("sec");
+        function showTime()
+            {
+                var y=new Date();
+                oYear.innerHTML= y.getFullYear();
+                oMonth.innerHTML= y.getMonth()+1;
+                oDay.innerHTML= y.getDate();
+                oHours.innerHTML= y.getHours();
+                oMin.innerHTML= y.getUTCMinutes();
+                oSec.innerHTML= y.getSeconds();
+            }
+        setInterval(function()
+                    {
+                       showTime();
+
+                    }
+
+
+
+                ,1000)
+
+    </script>
+</body>
+</html>

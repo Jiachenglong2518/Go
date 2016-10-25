@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>change</title>
+    <style>
+        button
+            {
+            margin-left: 200px;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../轮播图/img/1.png" alt="" id="img1"/>
+    </div>
+    <button id="change">交换</button>
+    <div>
+        <img src="../轮播图/img/2.png" alt="" id="img2" />
+    </div>
+    <script>
+        var oButton =document.getElementById("change");
+        var oImg1=document.getElementById("img1");
+        var oImg2=document.getElementById("img2");
+        oButton.onclick=function()
+            {
+                var oC=oImg1.src;
+                oImg1.src=oImg2.src;
+                oImg2.src=oC;
+            }
+    </script>
+
+</body>
+</html>
