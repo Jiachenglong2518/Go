@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>多行文本高度变化</title>
+    <style>
+        textarea{
+            width: 50px;
+            text-align: center;
+            line-height: 30px;
+            height: 300px;
+
+
+        }
+        textarea{
+            position: relative;
+        }
+        #a1{
+            position: absolute;
+            top: 40%;
+        }
+        #a2{
+            position: absolute;
+            top: 50%;
+        }
+        #a3{
+            position: absolute;
+            top: 60%;
+        }
+        #a4{
+            position: absolute;
+            top: 70%;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="big">大！大！大！</button>
+    <button id="sma">小！小！小</button><br/>
+    <textarea name="" id="" cols="30" rows="10">
+       <a id="a1"> 定</a>
+       <a id="a2"> 海</a>
+       <a id="a3"> 神</a>
+       <a id="a4">针</a>
+    </textarea>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+
+        $("#big").on("click", function ()
+            {
+             var $hei=$("textarea").height();
+             $("textarea").animate(
+                     {
+                         height:'+=50'
+                     },1000);
+
+            }
+            );
+        $("#sma").on("click", function ()
+            {
+                var $hei=$("textarea").height();
+                $("textarea").animate(
+                        {
+                            height:'-=50'
+                        },1000)
+
+
+            })
+
+
+
+
+    </script>
+</body>
+</html>
