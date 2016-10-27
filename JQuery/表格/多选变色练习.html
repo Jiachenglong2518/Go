@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单选</title>
+    <style>
+        td,th{
+            width: 150px;
+            height: 40px; ;
+
+        }
+        .even{
+            background: red;
+        }
+        .odd{
+            background: gray;
+        }
+        .change{
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <table >
+        <tr>
+            <th> </th>
+            <th>作者</th>
+            <th>作品</th>
+            <th>点击</th>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sel"/></td>
+            <td>唐家三少</td>
+            <td>斗罗大陆</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sel"/></td>
+            <td>辰东</td>
+            <td>神墓</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sel"/></td>
+            <td>西红柿子</td>
+            <td>武神</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sel"/></td>
+            <td>天蚕土豆</td>
+            <td>完美世界</td>
+            <td>1000000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="sel"/></td>
+            <td>王鹤楠</td>
+            <td>不要脸子</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $("tr:even").addClass("even");
+            $("tr:odd").addClass("odd");
+            $("tr").on("click",function(){
+                $(this).toggleClass("change");
+                var $ip=$(this).find("input");
+                if($(this).hasClass("change")){
+                    $ip.prop("checked",true)
+                }else{
+                    $ip.prop("checked",false)
+                }
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>
