@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        textarea{
+            font-size: 1px;
+        }
+    </style>
+</head>
+<body>
+    <button id="big">大！大！大！大</button>
+    <button id="sma">小！小！小！小</button><br/>
+    <textarea>
+        王鹤男没钱  每媳妇
+    </textarea>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $("#big").on("click",function(){
+            var $ts =$("textarea").css("font-size");
+            console.log($ts);
+            var $its=parseInt($ts);
+            console.log($its);
+            $its=$its+2;
+            console.log($its);
+            if($its>26){
+                $its=26;
+            }
+            $("textarea").css("font-size",$its);
+
+
+        });
+        $("#sma").on("click",function(){
+            var $ts =$("textarea").css("font-size");
+            console.log($ts);
+            var $its=parseInt($ts);
+            console.log($its);
+            $its=$its-2;
+            console.log($its);
+            if($its<12){
+                $its=12;
+            }
+            $("textarea").css("font-size",$its);
+
+        })
+
+
+    </script>
+</body>
+</html>
