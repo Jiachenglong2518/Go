@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/css.css"/>
+    <style>
+        #p{
+            width: 500px;
+            height: 100px;
+        }
+        #ads span{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+
+        }
+        #ads{
+            display: none;
+            float: left;
+            margin-top: 0px;
+            margin-left: 100px;
+        }
+        #ads ul {
+            float: left;
+        }
+        #ads ul li{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="gps"><a href="">首页</a></li>
+        <li class="gps">
+            <a href="">品牌</a>
+
+        </li>
+
+        <li class="gps"><a href="">女装</a></li>
+        <li class="gps"><a href="">男装</a></li>
+        <li class="gps"><a href="">鞋包配饰</a></li>
+    </ul>
+    <div id="ads">
+        <div>
+            <span>品牌</span>
+            <ul>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+                <li>耐克</li>
+            </ul>
+        </div>
+        <div>
+
+        </div>
+    </div>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+    $("#menu li").on("mouseover",function(){
+        $("#ads").css("display","block");
+        console.log(111)
+    })
+</script>
+</body>
+</html>
