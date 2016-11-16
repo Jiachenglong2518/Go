@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转骰子</title>
+    <style>
+        body{
+            -webkit-perspective: 800px;
+          /*  width: 150px;
+            height: 150px;*/
+        }
+        #box{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            -webkit-transform-style:preserve-3d;
+            -webkit-animation: a 2s linear infinite;
+            background: url("image/hot.gif") no-repeat 75px 75px;
+        }
+        @-webkit-keyframes a {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(-360deg);
+            }
+        }
+        #box div{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-color: white;
+            opacity: 0.3;
+            text-align: center;
+            line-height: 150px;
+            font-size: 100px;
+            border: solid 2px yellow;
+            border-radius: 0;
+
+        }
+        #b1{
+            -webkit-transform: rotateX(90deg) translateZ(75px);
+        }
+        #b2{
+            -webkit-transform:  translateZ(75px);
+        }
+        #b3{
+            -webkit-transform: rotateY(90deg) translateZ(75px);
+        }
+        #b4{
+            -webkit-transform: rotateY(180deg) translateZ(75px);
+        }
+        #b5{
+            -webkit-transform: rotateY(-90deg) translateZ(75px);
+        }
+        #b6{
+            -webkit-transform: rotateX(-90deg) translateZ(75px);
+        }
+
+    </style>
+</head>
+<body bgcolor="black">
+    <div id="box" >
+        <div id="b1">天</div>
+        <div id="b2">玄</div>
+        <div id="b3">黄</div>
+        <div id="b4">宇</div>
+        <div id="b5">宙</div>
+        <div id="b6">地</div>
+    </div>
+
+</body>
+</html>
