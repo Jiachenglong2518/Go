@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>悬浮球</title>
+    <style>
+        body{
+
+        }
+        #container{
+            position: absolute;
+            background-color: magenta;
+            cursor: pointer;
+        }
+        #container div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            transform-origin: center center;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            -webkit-transition: transform 1s linear;
+        }
+        #container div:hover{
+           height: 55px;
+           width: 55px;
+           font-size: 35px;
+        }
+        #container div:nth-child(1){
+            background-color: red;
+          /*  -webkit-transform: rotate(360deg);*/
+        }
+        #container div:nth-child(2){
+            background-color: yellow;
+        }
+        #container div:nth-child(3){
+            background-color: gray;
+        }
+        #container div:nth-child(4){
+            background-color: lawngreen;
+        }
+        #container div:nth-child(5){
+            color: red;
+            width: 50px;
+            height: 50px;
+            font-size: 30px ;
+            background-color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Q</div>
+        <div>W</div>
+        <div>E</div>
+        <div>R</div>
+        <div>B</div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        var oContainer = document.getElementById("container");
+        var tag=0;
+        oContainer.onclick=function(){
+        /*    for(var i=0;i<5;i++) {
+                /!*$("#container div").eq(i).css("-webkit-transform","translateX("+150-i*30+"px) translateY("+20*(i+1)+"px) rotate(360deg)")*!/
+            }*/
+        if(tag==0){
+            $("#container div").eq(0).css("-webkit-transform","translateX(150px) translateY(10px) rotate(360deg)");
+            $("#container div").eq(1).css("-webkit-transform","translateX(130px) translateY(70px) rotate(360deg)");
+            $("#container div").eq(2).css("-webkit-transform","translateX(100px) translateY(120px) rotate(360deg)");
+            $("#container div").eq(3).css("-webkit-transform","translateX(50px) translateY(150px) rotate(360deg)");
+            $("#container div").eq(4).css("-webkit-transform","translateX(0px) translateY(0px) rotate(360deg)");
+            tag=1;console.log(tag);
+        }
+        else{
+            $("#container div").css("-webkit-transform","translateX(0px) translateY(0px) rotate(0deg)");
+            tag=0;
+        }
+
+        };
+
+    </script>
+</body>
+</html>
