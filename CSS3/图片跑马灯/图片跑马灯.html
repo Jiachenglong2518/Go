@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: 50% -40%;
+        }
+        #img{
+            width: 160px;
+            height: 240px;
+            position: relative;
+            margin: 115px auto;
+            -webkit-transform-style:preserve-3d;
+            -webkit-transition: transform 2s linear;
+
+        }
+        @-webkit-keyframes x {
+            from{
+            }
+            to{
+                -webkit-transform: rotateY(-360deg);
+            }
+        }
+        #img img{
+            width: 160px;
+            height: 240px;
+            opacity: 0.8;
+            border: solid 1px black;
+            position: absolute;
+            -webkit-transform-style:preserve-3d;
+            -webkit-perspective: 800px;
+            -webkit-transition: transform 2s linear  ;
+        }
+
+      /*  #img img:nth-child(1){
+            -webkit-transform: rotateY(40deg) translateZ(260px)
+        }
+        #img img:nth-child(2){
+            -webkit-transform: rotateY(80deg) translateZ(260px)
+        }
+        #img img:nth-child(3){
+            -webkit-transform: rotateY(120deg) translateZ(260px)
+        }
+        #img img:nth-child(4){
+            -webkit-transform: rotateY(160deg) translateZ(260px)
+        }
+        #img img:nth-child(5){
+            -webkit-transform: rotateY(200deg) translateZ(260px)
+        }
+        #img img:nth-child(6){
+            -webkit-transform: rotateY(240deg) translateZ(260px)
+        }
+        #img img:nth-child(7){
+            -webkit-transform: rotateY(280deg) translateZ(260px)
+        }
+        #img img:nth-child(8){
+              -webkit-transform: rotateY(320deg) translateZ(260px)
+        }
+        #img img:nth-child(9){
+            -webkit-transform: rotateY(360deg) translateZ(260px)
+        }
+*/
+    </style>
+</head>
+<body>
+    <div id="img">
+        <img src="images/1.jpg" alt=""/>
+        <img src="images/2.jpg" alt=""/>
+        <img src="images/3.jpg" alt=""/>
+        <img src="images/4.jpg" alt=""/>
+        <img src="images/5.jpg" alt=""/>
+        <img src="images/6.jpg" alt=""/>
+        <img src="images/7.jpg" alt=""/>
+        <img src="images/8.jpg" alt=""/>
+        <img src="images/9.jpg" alt=""/>
+        
+    </div>
+    <script>
+        var oImg=document.getElementById("img");
+        var aImg=oImg.getElementsByTagName("img");
+        var index=0;
+        var a=8;
+        var html;
+        for(var i=0;i<9;i++){
+        }
+        oImg.onclick=function(){
+            this.style.WebkitAnimation=" x 9s linear infinite";//动画旋转
+            /*index++;
+            this.style.WebkitTransform="rotateY("+index*40+"deg)";*///transition旋转
+        };
+
+        /*var timer=setInterval(function(){
+            aImg[a].style.webkitTransform="rotateY("+(a*40)+"deg) translateZ(260px)";
+            a--;
+            if(a==-1){
+                clearInterval(timer)
+            }
+        },100);*/ //定时器一步
+
+        for(var i=0;i<aImg.length;i++){
+            (function(index){
+                setTimeout(function(){
+                    aImg[index].style.webkitTransform=" rotateY("+(index*40)+"deg) translateZ(260px)";
+                },100*(8-i))
+            })(i)
+        }
+    </script>
+
+</body>
+</html>
