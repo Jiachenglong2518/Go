@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片手风琴</title>
+    <style>
+        div{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            border:solid 1px red;
+            width: 830px;
+            height: 382px;
+            overflow: hidden;
+        }
+        div img{
+            -webkit-transition: all 1s linear 0.25s;
+        }
+        #img1{
+            position: absolute;
+            z-index: 1;
+        }
+        #img2{
+            position: absolute;
+            left: 170px;
+            z-index: 2;
+        }
+        #img3{
+            position: absolute;
+            left: 340px;
+            z-index: 3;
+        }
+        #img4{
+            position: absolute;
+            left: 510px;
+            z-index: 4;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/1.png" id="img1"/>
+        <img src="images/2.png" id="img2"/>
+        <img src="images/3.png" id="img3"/>
+        <img src="images/4.png" id="img4"/>
+    </div>
+    <script>
+        var oImg1=document.getElementById("img1");
+        var oImg2=document.getElementById("img2");
+        var oImg3=document.getElementById("img3");
+        var oImg4=document.getElementById("img4");
+        oImg1.onmouseover = function(){
+            oImg2.style.left="680px";
+            oImg3.style.left="730px";
+            oImg4.style.left="780px";
+        };
+        oImg2.onmousemove =function(){
+            oImg2.style.left="50px";
+            oImg3.style.left="730px";
+            oImg4.style.left="780px"
+        };
+        oImg3.onmouseover =function(){
+            oImg2.style.left="50px";
+            oImg3.style.left="100px";
+            oImg4.style.left="780px"
+        }
+        oImg4.onmouseover =function(){
+            oImg2.style.left="50px";
+            oImg3.style.left="100px";
+            oImg4.style.left="150px"
+        }
+
+    </script>
+
+</body>
+</html>
