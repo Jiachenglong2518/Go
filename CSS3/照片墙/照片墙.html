@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会旋转</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: url("img/bg.jpg");
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+          /*  background-color: red;*/
+        }
+       /* #container img{
+            position: absolute;
+            width: 125px;
+            height: 125px;
+            left: -150px;
+            top: -150px;
+
+        }*/
+        #container div{
+          /*  background:url("img/thumbs/i.jpg")*/
+            position: absolute;
+            left: -125px;
+            top: -125px;
+            width: 125px;
+            height: 125px;
+            -webkit-transition: all 1.5s ease-in-out;
+            /*border: solid 3px white;*/
+        }
+        #container span{
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: opacity 1.5s ease-in-out;
+        }
+        #next,#prev{
+            width: 60px;
+            height: 120px;
+            opacity: 0;
+            position: absolute;
+            top:50%;
+            margin-top:-60px;
+
+        }
+        #next{
+            background:url("img/next.png") center no-repeat white;
+            right: 0;
+            border-radius: 8px 0 0 8px;
+
+        }
+        #prev{
+            background:url("img/prev.png")   center no-repeat #fff;
+            left: 0;
+            border-radius:0  8px 8px 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <div id="prev"></div>
+    <div id="next"></div>
+    <script>
+        var oContainer = document.getElementById("container");
+
+        var oPrev=document.getElementById("prev");
+        var oNext=document.getElementById("next");
+        var sum=0;
+        var iNow=0;
+
+        for( var i=0;i<24;i++){
+            var oImg=new Image();
+            oImg.onload =function(){
+                sum++;
+                if(sum==48){
+                    loadSuccess();
+                }
+            }
+            oImg.src="img/thumbs/"+(i+1)+".jpg"
+        }
+        for( var i=0;i<24;i++){
+            var oImg=new Image();
+            oImg.onload =function(){
+                sum++;
+                if(sum==48){
+                    loadSuccess();
+                }
+            };
+            oImg.src="img/"+(i+1)+".jpg"
+        }
+        var cowWidth=(oContainer.offsetWidth-6*125)/7;
+        var rowHeight=(oContainer.offsetHeight-4*125)/5;
+       /* console.log(cowWidth);
+        console.log(rowHeight);
+        console.log(oContainer.offsetHeight)*/
+        var index=0;
+        function loadSuccess(){
+            for(var i=0;i<4;i++){
+                for(var j=0;j<6;j++){
+                    var oDiv=document.createElement("div");
+                    oDiv.classname="img";
+                    oDiv.pos={
+                        left:cowWidth+j*(125+cowWidth),
+                        top:rowHeight+i*(125+rowHeight)
+                    };
+
+                    oDiv.rowCol={
+                        x:j,
+                        y:i
+                    };
+                    /*console.log(oContainer.offsetWidth);
+                    console.log(oContainer.offsetHeight-i*(125+rowHeight)+'aaa');
+                    console.log(oContainer.offsetWidth-j*(125+cowWidth)+'bbb');*/
+                   /* console.log(oContainer.offsetHeight);*/
+                    oDiv.style.background='url("img/thumbs/'+(index+1)+'.jpg")';
+                    oDiv.innerHTML="<span></span>";
+                    oDiv.onclick = becomeBig;
+                    oDiv.imgIndex=index;
+                    oContainer.appendChild(oDiv);
+
+                    index++;
+                }
+            }
+        var aDiv=oContainer.getElementsByTagName("div");
+        var timer = setInterval(function(){
+                index--;
+                aDiv[index].style.left=aDiv[index].pos.left+"px";
+                aDiv[index].style.top=aDiv[index].pos.top+"px";
+                aDiv[index].style.transform="rotate("+parseInt(Math.random()*40-20)+"deg)";
+
+                if(index == 0){
+                    clearInterval(timer);
+                }
+            },50)
+        }
+        var bFlag = true;
+        var aSpan=oContainer.getElementsByTagName("span");
+        var aDiv=oContainer.getElementsByTagName("div");
+        function becomeBig(){
+            //图片聚合开始
+            if(bFlag){
+                for(var i=0;i<24;i++){
+                    aDiv[i].style.transform="rotate(0deg)";
+                    var cowWidth2=(oContainer.offsetWidth-6*125)/2;
+                    var rowHeight2=(oContainer.offsetHeight-4*125)/2;
+                    aDiv[i].pos2={
+                        left:cowWidth2+aDiv[i].rowCol.x*125,
+                        top:rowHeight2+aDiv[i].rowCol.y*125
+                    };
+                    aDiv[i].style.left=aDiv[i].pos2.left+"px";
+                    aDiv[i].style.top=aDiv[i].pos2.top+"px";
+                    aDiv[i].style.border="solid 2px white";
+                    var spanLeft=-(aDiv[i].rowCol.x*125);
+                    var spanTop=-(aDiv[i].rowCol.y*125);
+                    aSpan[i].style.background="url('img/"+(this.imgIndex+1)+".jpg') "+spanLeft+"px "+spanTop+"px";
+                    iNow=this.imgIndex;
+                    aSpan[i].style.opacity=1;
+                    oNext.style.opacity=1;
+                    oPrev.style.opacity=1;
+                }
+
+            }
+            else{
+                for(var i=0;i<24;i++){
+                    aDiv[i].style.left=aDiv[i].pos.left+"px";
+                    aDiv[i].style.top=aDiv[i].pos.top+"px";
+                    aDiv[i].style.border="none";
+                    aDiv[i].style.transform="rotate("+parseInt(Math.random()*40-20)+"deg)";
+                    aSpan[i].style.opacity="0";
+                    oNext.style.opacity=0;
+                    oPrev.style.opacity=0;
+                }
+
+            }
+            bFlag=!bFlag;
+        }
+        oNext.onclick =  oPrev.onclick =function(){
+            if(this == oNext){
+                iNow++;
+                if(iNow==aDiv.length){
+                    iNow=0;
+                }
+            }else{
+                iNow--;
+                if(iNow==-1){
+                    iNow=aDiv.length-1;
+                }
+            }
+            var arr=[];
+            for(var i=0;i<24;i++){
+                arr.push(i);
+            }
+            arr.sort(function(a,b){
+                return Math.random()-0.5;
+            });
+
+            var timer2=setInterval(function(){
+                var num=arr.pop();
+                var spanLeft=-(aDiv[num].rowCol.x*125);
+                var spanTop=-(aDiv[num].rowCol.y*125);
+                aSpan[num].style.background="url('img/"+(iNow+1)+".jpg') "+spanLeft+"px "+spanTop+"px";
+                console.log("url('img/"+(iNow+1)+".jpg') "+spanLeft+"px "+spanTop+"px");
+                if(arr.length == 0){
+                    clearInterval(timer2);
+                }
+            },30)
+
+
+        };
+
+
+
+
+
+
+    </script>
+</body>
+</html>
