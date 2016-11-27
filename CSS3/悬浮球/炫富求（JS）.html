@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>炫富求</title>
+    <style>
+        #container{
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            width: 50px;
+            height: 50px;
+        }
+        #home{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transition: transform 1s ease;
+
+        }
+        #container img{
+            position: absolute;
+            transition: transform 1s ease;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="img/close.png" alt="" class="menu"/>
+        <img src="img/full.png" alt="" class="menu"/>
+        <img src="img/open.png" alt="" class="menu"/>
+        <img src="img/prev.png" alt="" class="menu"/>
+        <img src="img/refresh.png" alt="" class="menu"/>
+        <div id="home">
+            <img src="img/home.png" alt=""/>
+        </div>
+    </div>
+    <script>
+        var oHome=document.getElementById("home");
+        var aMenu=document.getElementsByClassName("menu");
+        var bFlag= false;
+        oHome.onclick = function(){
+            this.style.WebkitTransform = "rotate(-360deg)";
+            if(!bFlag)
+            for(var i=0;i<aMenu.length;i++){
+                aMenu[i].style.WebkitTransitionDelay=(aMenu.length-i)*40+'ms';
+                aMenu[i].style.WebkitTransform="translate("+-150*Math.cos(22.5*i*Math.PI/180)+"px,"+-150*Math.sin(22.5*i*Math.PI/180)+"px) rotate(-360deg)";
+               /* aMenu[i].style.WebKitTranstion*/
+                /* y:150*Math.sin(22.5*i*Math.PI/180);
+                 x:150*Math.cos(22.5*i*Math.PI/180);*/
+            }
+            else{
+                for(var i=0;i<aMenu.length;i++){
+                    aMenu[i].style.WebkitTransform="translate(0px,0px) rotate(0deg)";
+
+                }
+            }
+            bFlag=!bFlag
+        }
+        for(var i=0;i<aMenu.length;i++){
+            aMenu[i].onclick = function(){
+                this.style.WebkitTransform="translate("+-150*Math.cos(22.5*i*Math.PI/180)+"px,"+-150*Math.sin(22.5*i*Math.PI/180)+"px) rotate(-360deg) scale(2)"
+            }
+        }
+      /*  for(var i=0;i<aMenu.length;i++){
+            aMenu[i].style.WebkitTransform="translate("+-150*Math.cos(22.5*i*Math.PI/180)+"px,"+-150*Math.sin(22.5*i*Math.PI/180)+"px) rotate(-360deg)"
+    */</script>
+
+</body>
+</html>
