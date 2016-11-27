@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片大爆炸</title>
+    <style>
+        div{
+            position: absolute;
+            left: 200px;
+            top: 30px;
+            width: 750px;
+            height: 500px;
+            background: url("img/1.jpg");
+
+        }
+        span{
+            position: absolute;
+            width: 125px;
+            height: 125px;
+            -webkit-transition: all 1s ease ;
+        }
+        #next{
+            position: absolute;
+            left: 400px;
+            top: 550px;
+        }
+        #boom{
+            position: absolute;
+            left: 700px;
+            top: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <button id="next">下一张</button>
+    <button id="boom">爆炸</button>
+    <script>
+        var oDiv=document.getElementById("div");
+        var oNext=document.getElementById("next");
+        var oBoom=document.getElementById("boom");
+        var aSpan = document.getElementsByTagName("Span");
+        var index=1;
+
+        oNext.onclick = function(){
+            oDiv.innerHTML="";
+            oDiv.style.background="url('img/"+(index)+".jpg')";
+            for(var i=0;i<4;i++){
+                for(var j=0;j<6;j++){
+                    var oSpan=document.createElement("span");
+                    oSpan.style.left=j*125+"px";
+                    oSpan.style.top=i*125+"px";
+                    oSpan.style.webkitTransform="rotateY(-180deg)";
+                    oSpan.style.webkitBackfaceVisibility="hidden";
+                    oSpan.style.background="url('img/"+(index+1)+".jpg') "+(-j*125)+"px "+(-i*125)+"px";
+                    oDiv.appendChild(oSpan);
+                }
+            }
+            index++;
+            if(index==24){
+                index=0;
+            }
+            var a=0;
+            var timer=setInterval(function(){
+                aSpan[a].style.webkitTransform="rotateY(0deg)";
+                a++;
+                console.log(a);
+                if(a==24){
+                    clearInterval(timer);
+                }
+            },30)
+        };
+        oBoom.onclick=function(){
+            oDiv.innerHTML="";
+            oDiv.style.background="url('img/"+(index)+".jpg')";
+            oDiv.style.background="url('img/"+(index)+".jpg')";
+            for(var i=0;i<4;i++){
+                for(var j=0;j<6;j++){
+                    var oSpan=document.createElement("span");
+                    oSpan.style.left=j*125+"px";
+                    oSpan.style.top=i*125+"px";
+                    oSpan.style.webkitTransform="rotateY(-180deg)";
+                    oSpan.style.webkitBackfaceVisibility="hidden";
+                    oSpan.style.background="url('img/"+(index+1)+".jpg') "+(-j*125)+"px "+(-i*125)+"px";
+                    oDiv.appendChild(oSpan);
+                }
+            }
+
+        }
+    </script>
+
+</body>
+</html>
