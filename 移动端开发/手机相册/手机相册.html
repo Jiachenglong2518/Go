@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #container li{
+            float: left;
+            margin-right: 2px;
+        }
+        #container li:nth-child(3n){
+            margin-right: 0;
+        }
+        #bigImg{
+            display: none;
+            width: 100%;
+            height:100%;
+            border: 1px solid darkblue;
+            position: absolute;
+            -webkit-transition: all .5s ease ;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="bigImg"></div>
+    <script src="zepto.min.js"></script>
+    <script>
+        $(function(){
+            var $container=$("#container");
+            var $body=$("body");
+            var $bigImg=$("#bigImg");
+            var $iNow=0;
+            for(var i=0;i<24;i++){
+                 var $html="<li><img src='img/"+(i+1)+".jpg'/></li>";
+                $container.append($html);
+            }
+            $("#container li img").css({
+                width:($body.width()-2*3)/4,
+                height:($body.width()-2*3)/4
+            });
+            $("li").on("tap",function(){
+                var $index=$(this).index();
+                console.log($(this).index()+"bbbb")
+                console.log($index+"aaaa")
+                $container.hide();
+                $bigImg.show();
+                $bigImg.css({
+                    background:"url('img/"+($index+1)+".jpg') center no-repeat",
+                    backgroundSize:"contain"
+                });
+                console.log($index+1);
+                $iNow=$index;
+            });
+
+            $bigImg.on("swipeLeft",function(){
+                $iNow++;
+                if($iNow==23){
+                    $iNow=0
+                }
+                $bigImg.css({
+                    background:"url('img/"+($iNow+1)+".jpg') center no-repeat",
+                    backgroundSize:"contain"
+                });
+            }).on("swipeRight",function(){
+                $iNow--;
+                if($iNow==-1){
+                    $iNow=23
+                }
+                $bigImg.css({
+                    background:"url('img/"+($iNow+1)+".jpg') center no-repeat",
+                    backgroundSize:"contain"
+                });
+            }).on("tap",function(){
+                $bigImg.hide();
+                $container.show();
+            })
+
+
+
+
+        })
+
+    </script>
+
+
+</body>
+</html>
