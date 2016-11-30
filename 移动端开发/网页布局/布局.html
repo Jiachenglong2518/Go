@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 960px;
+            height: 80px;
+            background-color: gray;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 80px;
+        }
+        nav{
+            width: 960px;
+            height: 80px;
+            background-color: gray;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 80px;
+        }
+        #img{
+            margin: 0 auto;
+            width: 960px;
+        }
+        #img img{
+            width: 100%;
+        }
+        #container{
+            width: 960px;
+            margin:0 auto;
+
+
+        }
+        #text1{
+            background-color: green;
+            width:67%;
+            height: 300px;
+            float: left;
+            display: table;
+        }
+        #text2{
+            background-color: red;
+            width: 30%;
+            height: 300px;
+            float: right;
+            display: table;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #bottom{
+            width: 960px;
+            height: 80px;
+            margin: 0 auto;
+            background-color:gray;
+            text-align: center;
+            line-height: 80px;
+            clear: both;
+        }
+        @media (max-width: 959px) {
+            nav,header,#bottom,img,#img,#container{
+                width: 100%;
+            }
+
+        }
+        @media (max-width: 480px) {
+
+            #text1,#text2{
+                width: 100%;
+                float:none
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>页头</header>
+    <nav>标题</nav>
+    <div id="img">
+        <img src="images/1.png"/>
+    </div>
+    <div id="container">
+        <div id="text1">
+            <p>
+
+            </p>
+            </div>
+        <div id="text2">
+            <p>
+
+
+            </p>
+
+        </div>
+    </div>
+    <div id="bottom">页脚</div>
+
+
+</body>
+</html>
