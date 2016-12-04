@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>星巴克</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            height: 100%;
+        }
+        html{
+            height: 100%;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            height: 100px;
+           /* border: 1px dashed black;*/
+        }
+        header ul{
+            margin-top: 35px;
+            margin-left: 35px;
+            float: left;
+        }
+        header li{
+            width: 22px;
+            height: 4px;
+            background-color: gray;
+            margin-bottom: 3px;
+        }
+        header li:nth-child(4){
+            width: 22px;
+            font-size: 10px;
+            height: 10px;
+            background-color: white;
+        }
+        header #img{
+            width: 60px;
+            height: 60px;
+            float: left;
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            margin-left: -30px;
+            background: url("images/logo0.png") no-repeat center;
+            /*border: 1px dashed black;*/
+        }
+        header #info{
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            float: left;
+        }
+        header a{
+            color: orange;
+            font-size:16px;
+            font-family: 仿宋;
+        }
+        header p{
+            margin-bottom: 5px;
+        }
+        @media (max-width:668px) {
+            header div p{
+                font-size: 12px;
+                margin-bottom: 2px;
+            }
+            header span{
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 500px) {
+            header #img{
+                width: 10%; 
+                padding-top: 10%;
+                height: 0;
+                float: left;
+                background-size: cover
+            }
+            header ul{
+                margin-top: 26px;
+                margin-left: 20px;
+                float: left;
+            }
+
+        }
+
+        #bigImg{
+            width: 100%;
+            height: 600px;
+            position:relative;
+            background: url("images/kv-desktop-cn-20161027171806.jpg") center no-repeat;
+            background-size: cover;
+        }
+        #smallImg{
+              width: 100%;
+              height: 150px;
+              background: url("images/rewards.jpg");
+              background-size: cover;
+          }
+        @media (max-width: 960px) {
+            #bigImg{
+                width: 100%;
+                height: 0;
+                padding-top: 118%;
+                background: url("images/kv-mobile-cn-20161027171809.jpg")  no-repeat;
+                background-size: cover;
+            }
+            #smallImg{
+                width: 100%;
+                height: 0;
+                padding-top: 14.397%;
+                background-size:cover;
+            }
+        }
+        #vip{
+            width: 100%;
+            height:300px;
+            background-color: black;
+            color: white;
+            position: relative;
+            padding-top: 60px;
+        }
+        #vip #pBig{
+            font-size: 25px;
+            text-align: center;
+            font-family: sans-serif;
+            border-top: 100px;
+        }
+        #vip #pSmall{
+            text-align: center;
+            margin-top: 20px;
+        }
+        #vip span{
+            width: 100px;
+            height: 40px;
+            float: left;
+            border: solid 3px olive;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            margin-top:35px;
+            color: olive;
+        }
+        #vip span:hover{
+            background-color: olive;
+            color: white;
+        }
+        #vip #btn1{
+            position: absolute;
+            left: 50%;
+            margin-left: -120px;
+        }
+        #vip #btn2{
+            position: absolute;
+            left: 50%;
+            margin-left: 20px;
+        }
+        @media (max-width: 765px) {
+            #vip #btn1{
+                width: 76%;
+                height: 40px;
+                position: absolute;
+                left:12%;
+                margin-left: 0;
+
+            }
+            #vip #btn2{
+                width: 76%;
+                height: 40px;
+                position: absolute;
+                left:12%;
+                margin-top: 100px;
+                margin-left: 0;
+
+            }
+            
+        }
+        /*#down{
+            width: 100%;
+            height: 700px;
+            background-color:lightgray;
+            position: relative;
+        }
+        #down #mobile{
+            background:url("images/mobile-app-20160705111504.png") center ;
+            background-size:cover;
+            width: 600px;
+            height: 600px;
+            float: left;
+
+        }
+        #down h3{
+            padding-top: 150px;
+            margin-left: 50px;
+        }
+        #down #app{
+            width: 500px;
+            font-size: 25px;
+            margin-top: 10px;
+            margin-left: 50px;
+            float: left;
+        }
+        #down #ios{
+
+            width: 100px;
+            height: 40px;
+            border: solid 3px olive;
+            text-align: center;
+            line-height: 40px;
+            margin-top: 300px;
+            margin-left: 40px;
+        }
+        #down #android{
+
+            margin-left: 30px;
+            width: 150px;
+            height: 40px;
+            border: solid 3px olive;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+        }
+        #down #downApp{
+            display: none;
+            width: 103px;
+            height: 30px;
+            border: solid 3px olive;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+        }
+        #down #ios:hover,#android:hover{
+            background-color: olive;
+            color: white;
+        }
+        @media (max-width: 1300px) {
+            #down #mobile{
+                width:50% ;
+                height: 0;
+                padding-top: 50%;
+
+            }
+        }
+        @media (max-width: 765px) {
+            #down h3{
+                position: absolute;
+                top: 50px;
+            }
+            #down #app{
+                position: absolute;
+                top: 100px;
+                width: 80%;
+            }
+            #down #mobile{
+                position: absolute;
+                top: 30%;
+                right: 10%;
+                width: 80%;
+                height: 0;
+                padding-top: 80%;
+            }
+            #ios,#android{
+                display: none;
+            }
+            #down #downApp{
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                display: block;
+            }
+        }
+        @media (max-width: 480px) {
+            #down #mobile{
+                position: absolute;
+                top: 40%;
+                right: 10%;
+                width: 80%;
+                height: 0;
+                padding-top: 80%;
+            }
+        }*/
+        #down{
+            position: relative;
+            padding: 0 0;
+            background-color: #ffe;
+        }
+        #down #container{
+            padding: 180px 30px;
+            width: 1002px;
+            margin: 0 auto;
+        }
+        #down #text-box {
+            width: 50%;
+        }
+        #text-box #text{
+            margin-top: 10px;
+            font-size: 26px;
+            font-weight: 500;
+        }
+        #down #load{
+           margin-top: 200px;
+        }
+        #down img{
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            width: 50%;
+        }
+        #down #android,#ios{
+            border: 2px solid olive;
+            display: inline-block;
+            height: 37px;
+            text-align: center;
+            line-height: 37px;
+            font-weight: 500;
+            color: olive;
+        }
+        #down #android{
+            width: 20%;
+        }
+        #down #ios{
+            width: 10%;
+        }
+        #down #downApp{
+            display: none;
+        }
+        @media (max-width: 1192px) {
+            #down #container{
+                width: 700px;
+            }
+        }
+        @media (max-width: 780px) {
+            #down{
+                padding: 0 30px 50px 30px;
+            }
+            #down #container{
+                width: 100%;
+                padding: 90px 0px 10px 0px;
+            }
+            #down img {
+                position: static;
+                float: right;
+                width: 90%;
+              }
+            #down #text-box{
+                width: 100%;
+            }
+            #down #load{
+                display: none;
+            }
+            #down #downApp{
+                display: block;
+                clear: both;
+                border: 2px solid olive;
+                width: 23%;
+                height: 14%;
+                text-align: center;
+                line-height: 35px;
+                color: olive;
+                font-weight: 800;
+                font-size: 90%;
+            }
+        }
+        #shop #s-right,#shop #s-left{
+            width: 50%;
+            padding-top: 50%;
+            height: 0;
+            float: left;
+        }
+        #shop #s-left{
+            background: url("images/left.jpeg") no-repeat;
+            background-size: cover;
+            position: relative;
+            display:table;
+        }
+        #shop #s-right{
+            background: url("images/right.jpg") no-repeat;
+            background-size: cover;
+            position: relative;
+
+        }
+
+        #shop #s-text-box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+        /*#shop .t-box{
+            display: table;
+            width: 100%;
+            height: 100%;
+        }*/
+        #shop #s-text{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+        @media (max-width: 700px) {
+            #shop div #s-left{
+                clear: left;
+                width: 100%;
+                padding-top: 100%;
+            }
+            #shop div #s-right{
+                clear: left;
+                width: 100%;
+                padding-top: 100%;
+            }
+        }
+        #love{
+            display: table;
+            width: 100%;
+            padding: 80px 0;
+        }
+        #love #l-text{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #love #l-text h2{
+            margin-top: 20px;
+        }
+        #love #l-text #p0{
+            color: #a98e67;
+            letter-spacing: 3px;
+            font-family: AvenirBlack, 'HelveticaNeue-Light', 'Helvetica Neue', arial, "Hiragino Sans GB", "冬青黑体", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+        }
+        #love #l-text #p1{
+            margin-top: 40px;
+        }
+        #change #img-box{
+            padding: 0 10px;
+            overflow: hidden;
+        }
+        #change ul{
+            width: 2320px;
+            position: relative;
+        }
+        #change li{
+            margin-right: 10px;
+            width: 280px;
+            height: 280px;
+            float: left;
+        }
+        #change li img{
+            width: 280px;
+            height: 280px;
+
+        }
+        #change #circle{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0 30px 0;
+        }
+         #circle span{
+            background-color: gray;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+         #circle span.no{
+             display: none;
+        }
+        @media (max-width: 1159px){
+            #circle span.three{
+                display: inline-block;
+            }
+        }
+        @media (max-width: 869px) {
+            #circle span.four {
+                display:inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>菜单</li>
+        </ul>
+        <div id="img"></div>
+        <div id="info">
+            <p>星享俱乐部</p>
+            <a href="">登陆</a><span>或</span><a href="">注册</a>
+        </div>
+    </header>
+    <div id="bigImg"></div>
+    <div id="smallImg"></div>
+    <div id="vip">
+        <p id="pBig">星享俱乐部</p>
+        <p id="pSmall">开启你的星星之旅，星星越多、会员等级越高、好礼越丰富</p>
+        <span id="btn1">登陆</span>
+        <span id="btn2">注册</span>
+    </div>
+    <div id="down">
+        <div id="container">
+            <div id="text-box">
+                <h3>星巴克中国官方应用</h3>
+                <div id="text">更新或下载全新星巴克中国官方APP，开启更便捷的星巴克体验。
+                    将新购买的星礼卡轻松关联至您的账户，即时通过手机进行移动支付，查看消费记录，
+                    管理卡片。
+                </div>
+            </div>
+            <div id="load">
+                <div id="ios">IOS下载</div>
+                <div id="android">ANDROID下载</div>
+            </div>
+        </div>
+        <img src="images/mobile-app-20160705111504.png" alt=""/>
+        <div id="downApp">下载应用</div>
+    </div>
+    <div id="shop">
+        <div id=s-left>
+            <div id="s-text-box">
+                    <div id="s-text">
+                        <p>星巴克限量供应中</p>
+                        <h2>随时随地来一杯手冲心意</h2>
+                    </div>
+                </div>
+        </div>
+        <div id=s-right>
+          <!--  <p>圣诞季送出你的心意</p>
+            <h2>点击了解更多</h2>-->
+        </div>
+    </div>
+    <div id="love">
+        <div id="l-text">
+            <p id="p0">星巴克经典</p>
+            <h2>咖啡师的最爱</h2>
+            <p id="p1">回溯多年历史，星巴克的技巧纯熟的咖啡师一直用心制作星巴克的经典与饮品。</p>
+        </div>
+    </div>
+    <div id="change">
+        <div id="img-box">
+            <ul>
+                <li><img src="images/img1.jpeg" alt=""/></li>
+                <li><img src="images/img2.jpeg" alt=""/></li>
+                <li><img src="images/img3.jpg" alt=""/></li>
+                <li><img src="images/img4.jpg" alt=""/></li>
+                <li><img src="images/img5.jpg" alt=""/></li>
+                <li><img src="images/img6.jpg" alt=""/></li>
+                <li><img src="images/img7.jpg" alt=""/></li>
+                <li><img src="images/img7.jpg" alt=""/></li>
+            </ul>
+        </div>
+        <div id="circle">
+            <span></span>
+            <span></span>
+            <span class="three no"></span>
+            <span class="four no"></span>
+        </div>
+    </div>
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/zepto.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
