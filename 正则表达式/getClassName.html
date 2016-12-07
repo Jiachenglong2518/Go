@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li class="a b">01</li>
+        <li>02</li>
+        <span class="a">a</span>
+        <li class="a">03</li>
+    </ul>
+    <script>
+        function getClsName(str,obj){
+            obj=obj||document;
+            if(document.getElementsByClassName){
+                return obj.getElementsByClassName(str);
+            }
+            else{
+                var res=[];
+                var all=obj.getElementsByTagName("*");
+                var re = new RegExp("\\b"+str+"\\b");
+                for(var i=0;i++;i<all.length){
+                    if(re.test(all[i].className)){
+                        res.push(all[i]);
+                    }
+                }
+                return res;
+            }
+        }
+        var aLi=getClsName("a");
+        console.log(aLi);
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].style.background="red"
+        }
+    </script>
+
+</body>
+</html>
