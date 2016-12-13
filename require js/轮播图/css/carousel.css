@@ -1,0 +1,51 @@
+.carousel-container{
+    position: relative;
+    width: 520px;
+    height: 280px;
+}
+
+.carousel-img img{
+    display: none;
+}
+.carousel-img img.selected{
+    display: block;
+}
+.carousel-tabs{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.carousel-tabs li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: darkgray;
+    color: white;
+    margin-left: 5px;
+}
+.carousel-tabs li.selected{
+    background-color: orange;
+}
+.carousel-tabs li.circle{
+    border-radius: 50%;
+}
+.carousel-tabs li.square{
+    text-align: center;
+    line-height: 20px;
+    color: gray;
+}
+.carousel-arrows{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.carousel-arrows span{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 3px;
+    background-color: gray;
+    color: white;
+    float: left;
+}
