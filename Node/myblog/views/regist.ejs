@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <form action="/users/xxx" method="post">
+        <p>
+            用 户 名      ：<input type="text" name="uname" id="uname"/>
+        </p>
+        <p>
+            密 &nbsp; 码  ：<input type="password" name="pwd"/>
+        </p>
+        <p>
+            确认密码 ：<input type="password" name="pwd"/>
+        </p>
+        <p>
+            <input type="submit" value="提交"/>
+        </p>
+    </form>
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#uname").on("blur",function(){
+                var that=this;
+                $.get("/users/checkUser",{
+                            username:this.value
+                        },function(data){
+                            if(data=='success'){
+                                $('<span>Yes</span>').insertAfter(that);
+                            }else if(data=="fail"){
+                                $('<span>No</span>').insertAfter(that);
+                            }
+                        },"text")
+            })
+            $("#uname").focus(function(){
+                $("#uname").siblings().remove();
+
+
+            })
+        })
+
+    </script>
+</body>
+</html>
