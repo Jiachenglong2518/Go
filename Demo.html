@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #triangle{
+            width: 100px;
+            height: 100px;
+           /* border: 1px solid black;*/
+        }
+        p{
+            float: left;
+        }
+        #mycanvas{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="triangle">
+       <!-- <p>12313132</p>-->
+        <canvas id="mycanvas"></canvas>  
+    </div>
+
+    <script>  
+        var mycanvas=document.getElementById('mycanvas');  
+        mycanvas.width="500";  
+        mycanvas.height="500";  
+        mycanvas.style.border="1px solid red";  
+        var ctx=mycanvas.getContext("2d");  
+        ctx.lineWidth = "1";  
+        ctx.beginPath();  
+        ctx.strokeStyle="black";
+
+        ctx.moveTo(10,10);  
+        ctx.lineTo(10,100);  
+        ctx.lineTo(400,10);  
+        ctx.closePath();  
+        ctx.stroke();  
+        mycanvas.onmousemove = function(){
+            ctx.strokeText("11111" ,20,20);
+        }
+    </script>
+    </body>
+</html>
