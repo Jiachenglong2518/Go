@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import "test11" ;
+
+@import "1.css"; 
+/* 这是我的css */	
+$width:110px;
+$height:10px;
+$width: 100xp !default;
+$bg:background;
+body{
+	#{$bg}:yellow;
+	a{
+		width:$width/$height;
+	};
+	.div{
+		height: 100xp;
+	};
+}
+div{
+	#{$bg}:blue;
+	width:$width;
+}
+a{
+	background-color: #FFF
+}
+@mixin border($col:red){
+	background-color: $col;
+}
+.aa{
+	height:10px;
+	@include border; 
+}
+
+p{
+	@extend a;
+	&:hover{
+		background-color: #FFF
+	}
+}
+@function add($x,$y){
+	@if($x==0){
+		@return 0;
+	};
+	
+}
+.cc{
+	width:add(0,10px)
+}
