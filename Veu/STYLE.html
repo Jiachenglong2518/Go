@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:style="colorStyle">111111111111111</p>
+        <p v-bind:style="[colStyle]">222222222222222</p>
+        <p v-bind:style="{color:cStyle}">3333333333333333</p>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var vm =new Vue({
+            el:"#app",
+            data:{
+                colorStyle:{
+                    color:"red"
+                },
+                colStyle:{
+                    color:"blue"
+                },
+                cStyle:"yellow"
+            }
+        });
+
+    </script>
+</body>
+
+</html>
