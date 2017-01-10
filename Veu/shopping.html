@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        li div{
+            width:500px;
+            height:38px;
+            color:white;
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app" v-bind:style="doStyle">
+        <h2 >购物车</h2>
+        <ul>
+            <li v-bind:style="lStyle"  id="ll">
+                <div v-for="item in items" v-bind:style=item.dStyle v-on:click="change(item)"
+                      v-on:click="total(item)">
+                    {{item.name}} &nbsp; &nbsp;&nbsp;&nbsp; {{item.price}}
+                </div>
+            </li>
+        </ul>
+        <hr/>
+        总价是：{{total()}}
+    </div>
+    <script src="vue.js"></script>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+        var vm= new Vue({
+            el:"#app",
+            methods:{
+                change:function(item){
+                    if(item.flag==0){
+                        item.dStyle.background="green";
+                        item.flag=1;
+                    }else if(item.flag==1){
+                        item.dStyle.background="gray";
+                        item.flag=0;
+                    }
+
+                },
+                total:function(){
+                    var totalPrice=0;
+                    this.items.forEach(function(item){
+                        if(item.flag==1){
+                            totalPrice+=item.price;
+                        }
+                    });
+                    return totalPrice;
+                }
+            },
+            data:{
+                items:[
+                    {name:"shoes",price:100,dStyle:{
+                        background:"gray"
+                    },  flag:0},
+                    {name:"shirt",price:100,dStyle:{
+                        background:"gray"
+                    },  flag:0},
+                    {name:"house",price:100000,dStyle:{
+                        background:"gray"
+                    },  flag:0},
+                    {name:"BMW",price:10000,dStyle:{
+                        background:"gray"
+                    },  flag:0},
+                    {name:"阿斯顿马丁",price:1000000000,dStyle:{
+                        background:"gray"
+                    },  flag:0}
+                ],
+
+                doStyle:{
+                    "text-align":"center"
+                },
+                lStyle:{
+                    "margin-left":"350px",
+                    "line-height":"38px"
+                }
+
+            }
+
+        })
+
+    </script>
+</body>
+</html>
