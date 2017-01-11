@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{firstname}}+{{secondname}}={{fullname}}
+        <input type="text" v-model="firstname"/>
+        <input type="text" v-model="secondname"/>
+
+
+
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        var vm =new Vue({
+            el:"#app",
+            data:{
+                firstname:"zhang",
+                secondname:"san"
+            },
+            computed:{
+                fullname:{
+                    get:function(){
+                        return this.firstname +" "+ this.secondname;
+                    },
+                    set: function(val){
+                        var arr=val.split(" ");
+                        firstname=arr[0];
+                        secondname=arr[1];
+                    }
+                }
+            }
+        });
+
+
+    </script>
+</body>
+</html>
