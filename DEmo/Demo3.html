@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #img-box{
+            width: 480px;
+            height: 200px;
+            margin: 50px auto;
+          /*  overflow: hidden;*/
+            position: relative;
+            border: solid 1px black;
+        }
+
+        #img{
+            position: absolute;
+          /*  -webkit-transition: all  ease-in .1s ;*/
+          /*  border: solid 1px black;*/
+        }
+        #img li{
+            float: left;
+            margin-right: 20px;
+        }
+        img{
+              width: 150px;
+              height: 200px;
+          }
+        #next{
+            position: absolute;
+            top: 150px;
+            right: 200px;
+            width: 60px;
+            height: 45px;
+            background-color: gray;
+            text-align: center;
+            line-height: 50px;
+            font-size: 40px;
+        }
+        #prop{
+            position: absolute;
+            top: 150px;
+            left: 200px;
+            width: 60px;
+            height: 45px;
+            background-color: gray;
+            text-align: center;
+            line-height: 50px;
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="img-box">
+        <ul id="img">
+            <li><img src="img/1.jpg" alt=""/></li>
+            <li><img src="img/2.jpg" alt=""/></li>
+            <li><img src="img/3.jpg" alt=""/></li>
+            <li><img src="img/4.jpg" alt=""/></li>
+            <li><img src="img/5.jpg" alt=""/></li>
+            <li><img src="img/6.jpg" alt=""/></li>
+            <li><img src="img/7.jpg" alt=""/></li>
+            <li><img src="img/8.jpg" alt=""/></li>
+            <li><img src="img/9.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <span id="prop">&lt;</span>
+    <span id="next">&gt;</span>
+    <script>
+        var oNext = document.getElementById("next");
+        var oProp = document.getElementById("prop");
+        var oUl = document.getElementById("img");
+        var aImg  = oUl.getElementsByTagName("img");
+        var a=aImg[0].offsetWidth;
+        oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+        oUl.style.width=(a+20)*aImg.length+"px";
+        var index=0;
+        oNext.onclick = function(){
+            index++;
+            var long=aImg.length;
+            if(index==long/2){
+                index=0
+            }
+            var iLeft=-index*(a+20);
+            if(iLeft==-oUl.offsetWidth/2){
+                iLeft=0;
+            }
+            oUl.style.left=iLeft+"px";
+            console.log(index+'aa')
+
+        };
+        oProp.onclick = function(){
+            index--;
+            var long=aImg.length;
+            if(index==-long/2){
+                index=0;
+            }
+            var iLeft=-index*(a+20)-oUl.offsetWidth/2;
+           if(iLeft==0){
+                iLeft=-oUl.offsetWidth/2;
+            }
+            console.log(long);
+            console.log(index);
+            oUl.style.left=iLeft+"px";
+        }
+    </script>
+</body>
+</html>
