@@ -1,0 +1,86 @@
+
+.wrapper{
+    width:1170px;
+    margin:0 auto;
+}
+.details_bar{
+    margin:26px 0;
+    height: 380px;
+}
+.sidebar_left{
+    width: 380px;
+    height: 380px;
+    float: left;
+    background: blue;
+}
+.sidebar_right{
+    width: 730px;
+    height: 380px;
+    float: right;
+    background: #fff;
+}
+.nav_head{
+    height:70px;
+    background: #5bced2;
+    text-align: left;
+    text-indent: 90px;
+    line-height: 70px;
+    font-size: 22px;
+    color:#fff;
+    font-family: "Microsoft YaHei" ! important;
+}
+.details{
+    color:#7e7d87;
+}
+.details table{
+    width:570px;
+    height: 220px;
+    margin:20px auto;
+    background:#fff;
+
+}
+.details td{
+    height:35px;
+    font-family: "Microsoft YaHei" ! important;
+}
+.pr{
+    font-size:30px;
+    color:#f86e6f;
+}
+.sel{
+    color:#f86e6f;
+}
+.btn{
+    width: 115px;
+    height: 35px;
+    border:1px solid #dfe4e6;
+    color:#7e7d87;
+    background: #fff;
+    font-family: "Microsoft YaHei" ! important;
+}
+.chos{
+    border:1px solid #5bced2;
+}
+.handler{
+    float: right;
+    margin-right:55px;
+}
+.btns{
+    width: 220px;
+    height: 45px;
+    font-size: 16px;
+    color:#5bced2;
+    border:1px solid #5bced2;
+    background: #fff;
+    font-family: "Microsoft YaHei" ! important;
+}
+.collect{
+    letter-spacing: 26px;
+}
+.slt{
+    color:#fff;
+    border:1px solid #5bced2;
+    background: #5bced2;
+}
+
+

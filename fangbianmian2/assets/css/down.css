@@ -1,0 +1,36 @@
+.choosecard{
+    width:100%;
+    height:33px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.card{
+    width:270px;
+    background: #f7f8f9;
+    border:1px solid #d5d6d8;
+    float: left;
+    margin-right: 30px;
+    text-align: center;
+    line-height: 37px;
+    border-radius: 5px;
+    color:#617b8e;
+    font-family: "Microsoft YaHei" ! important;
+    position: relative;
+    z-index:10;
+}
+.card li{
+    width: 100%;
+    height:37px;
+    line-height: 37px;
+    text-align: center;
+    float: left;
+    display: none;
+}
+.white{
+    float: right;
+    width: 14px;
+    height: 20px;
+    margin-top: 16px;
+    margin-right: 20px;
+    background: url(../img/down.png) no-repeat;
+}

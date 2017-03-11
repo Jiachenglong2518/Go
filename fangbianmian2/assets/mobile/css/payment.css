@@ -1,0 +1,125 @@
+.wrap{
+    padding: 0 0.5rem;
+}
+.gray-block{
+    height: 0.13rem;
+    border-top:0.01rem solid #e1e1e1;
+    border-bottom: 0.01rem solid #e1e1e1;
+    background: #f2f2f2;
+}
+.order-ifo{
+    width: 5.4rem;
+}
+.order-ifo li{
+    width: inherit;
+    height: 0.86rem;
+}
+span{
+    height: 0.86rem;
+    font-size: 0.26rem;
+    color: #081424;
+    line-height: 0.86rem;
+}
+
+.side_title{
+    float: left;
+    width: 1.4rem;
+}
+.side_content{
+    float: right;
+    width: 4rem;
+    text-align: right;
+}
+.side_content input{
+    text-align: right;
+    float: right;
+    width: 90%;
+    height: 90%;
+    font-size: 0.26rem;
+    color: #617083;
+    line-height: 0.84rem;
+    outline: none;
+    border: none;
+}
+.remark{
+    resize: none;
+    border: 0;
+    font-size: 0.2rem;
+    color: #617083;
+    line-height: 0.3rem;
+    height: 1rem;
+    width:90%;
+    outline: none;
+}
+.pay_way{
+    height: 0.5rem;
+    font-size: 0.22rem;
+    color: #081424;
+    background: #f2f2f2;
+    border-bottom: 1px solid#dddde0;
+    border-top: 1px solid#dddde0;
+    text-indent: 0.5rem;
+    line-height: 0.5rem;
+}
+.green-content{
+    color: #20ac70;
+}
+p,a{
+    font-size: 0.22rem;
+    color: #93939c;
+}
+p a:last-child{
+    float: right;
+}
+.font-pay{
+    font-size: 0.26rem;
+    text-align: center;
+    line-height: 0.93rem;
+    width: 5.38rem;
+    height:0.93rem;
+ }
+.radio-pay{
+
+    color: #22b978;
+
+    border: 0.01rem solid #45cf94;
+}
+.p-text{
+    line-height: normal;
+    height: 1.5rem;
+    text-align: left;
+}
+.bottom-border{
+    border-bottom: 0.02rem solid #dddde0;
+}
+li.remark-height{
+    height: 1.5rem;
+}
+.font-agree{
+    font-size: 0.2rem;
+    text-align: center;
+    line-height: 0.4rem;
+    width: 5.38rem;
+    height:0.4rem;
+    color: #c4cfd7;
+}
+.font-agree label{
+    color: #858b93;
+    height: 0.3rem;
+    display: block;
+    -webkit-box-flex: 1;
+    position: relative;
+    /*background: url("../img/空框.png") no-repeat 1rem 0.1rem;*/
+}
+.font-agree label img{
+    width: 0.2rem;
+    position: absolute;
+    top:0.1rem;
+    left: 1rem;
+}
+input[type="radio"]{
+    display: none;
+}
+.font-pay label{
+    background: url("../img/radio_unselected.png") no-repeat;
+}

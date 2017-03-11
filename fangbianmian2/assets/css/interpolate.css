@@ -1,0 +1,155 @@
+
+.wrapper{
+    width:1170px;
+    margin:0 auto;
+}
+.ad{
+    position: relative;
+    width: 1170px;
+    height:100px;
+    background:url("../img/ad.png")
+}
+.push{
+    position: absolute;
+    top: 25px;
+    left: 496px;
+    height:45px;
+    width:180px;
+    background: #fff;
+    line-height: 45px;
+    text-align: center;
+    opacity:0.6;
+    border-radius:5px;
+    color:#324656;
+    font-size:14px;
+    font-family: "Microsoft YaHei" ! important;
+}
+.push a{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+#carouse{
+    width: 1170px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+}
+.carouse-prev{
+    position: absolute;
+    left: 0;
+    top: 33px;
+}
+.carouse-next{
+    position: absolute;
+    right: 0;
+    top: 33px;
+}
+.carouse-container{
+    position: absolute;
+    width: 1103px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 22px;
+    z-index: 1;
+}
+.carouse-container img{
+    border: 1px solid #e1e4e5;
+    float: left;
+    margin: 0 12px;
+}
+.carouse-border{
+    width: 2000px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.interpolate-list{
+    width: 1170px;
+    height: 1070px;
+    margin: 0 auto;
+    padding-top: 9px;
+
+}
+.interpolate-list li{
+    float: left;
+    width: 270px;
+    height: 336px;
+    background: #fff;
+    margin: 15px 30px 15px 0;
+}
+.interpolate-list.star-list li{
+    height: 300px;
+}
+.interpolate-list li:nth-child(4n){
+    margin-right: 0;
+}
+.li-img{
+    float: left;
+    width: 100%;
+    height: 210px;
+    background: url('../img/01.jpg') center center;
+}
+.li-words{
+    float: left;
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    padding-top: 16px;
+    padding-bottom: 14px;
+}
+.company{
+    margin-left: 14px;
+}
+.job,.company,.symbol{
+    font-size: 14px;
+    font-weight: bold;
+    color: #2b4056;
+}
+.price{
+    color: #f86e6f;
+    font-size: 20px;
+    margin-left: 58px;
+    margin-top: 14px;
+}
+.price-unit{
+    font-size: 10px;
+    color: #fcacad;
+    margin-left: 5px;
+}
+.education{
+    margin-left: 14px;
+}
+.symbol2{
+    margin: 0 3px; 
+}
+.education,.major,.symbol2{
+    color: #4e6174;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.ability.selected{
+    margin-left: 14px;
+}
+.ability{
+    margin-top: 7px;
+    color: #4e6174;
+    font-size: 12px;
+}
+.look,.help{
+    float: left;
+    font-size: 14px;
+}
+.look{
+    padding: 12px 40px;
+    background: #f7f9fa;
+    color: #5ce1a8; 
+}
+.help{
+    padding: 12px 39px;
+    background: #5ce1a8;
+    color: #fff;
+}
+

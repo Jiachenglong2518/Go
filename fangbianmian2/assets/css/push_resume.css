@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.push_resume_container{
+    margin: 0 auto;
+    width:800px;
+    height:750px;
+    position: relative;
+}
+.wrap{
+    width:680px;
+    margin:0 auto;
+    position: relative;
+}
+.push_detail_placeholder{
+    height:45px;
+}
+.push_resume_container h1{
+    font-size: 26px;
+    width: 400px;;
+    color:#3c5966;
+}
+.push_resume_basic_information{
+    width:680px;
+    height:120px;
+    border-bottom:1px solid #d2d4d5;
+    position: relative;
+}
+.push_resume_basic_information ul{
+    margin-top:26px;
+    width: 400px;;
+}
+.push_resume_basic_information ul li{
+    width: 200px;;
+    margin-bottom: 15px;;
+    float: left;
+    color: #72747b;;
+    font-size: 16px;;
+}
+.push_resume_basic_portrait{
+    width:106px;
+    height:106px;
+    position:absolute;
+    right:46px;
+    bottom:15px;
+    /*float: right;*/
+    /*margin-right: 46px;*/
+    border-radius: 50%;
+    background: deeppink;
+}
+.push_resume_company{
+    width:680px;
+    height:216px;
+    border-bottom:1px solid #d2d4d5;
+    position: relative;
+}
+.push_resume_company h2{
+    font-size: 18px;;
+    color:#3c5966;
+    margin-top: 20px;
+}
+.push_resume_company ul{
+    margin-top: 22px;
+
+}
+.push_resume_company ul li{
+    margin-bottom: 18px;
+    color: #6f6e78;
+}
+.push_resume_project_introduction{
+    width:680px;
+    height:216px;
+    border-bottom:1px solid #d2d4d5;
+    position: relative;
+}
+.push_resume_project_introduction h2{
+    font-size: 18px;;
+    color:#3c5966;
+    margin-top: 20px;
+}
+.push_resume_project_introduction ul{
+    margin-top: 22px;
+
+}
+.push_resume_project_introduction ul li{
+    margin-bottom: 18px;
+    color: #6f6e78;
+}
+.push_resume_bottom h2{
+    float: left;
+    font-size: 18px;
+    color: #56565d;
+}
+.push_resume_bottom{
+    position: relative;
+}
+.push_resume_bottom_company{
+    margin-top: 20px;
+}
+.push_resume_bottom_position{
+    position: absolute;
+    bottom:-80px;
+}
+.push_resume_bottom_price{
+    width:170px;
+    height:30px;
+    position: absolute;
+    right: 0;
+    top:10px;
+}
+.push_resume_bottom_price{
+    font-size: 16px;
+    color:#a5a4ac;
+}
+.push_resume_bottom_price a{
+    font-size: 24px;
+    color:#f86e6f;
+}
+.push_resume_bottom_price span{
+    font-size: 13px;
+    color:#f86e6f;
+}
+.push_resume_bottom_collection{
+    position:absolute;
+    bottom: -80px;
+    right: 200px;
+    font-size: 15px;
+    color: #949f9a;
+}
+.push_resume_bottom_push{
+    width:170px;
+    height: 35px;;
+    border:1px solid #58d7a0;
+    text-align: center;
+    line-height: 35px;;
+    position:absolute;
+    bottom: -80px;
+    right: 0;
+    color: #23c17d;;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+}

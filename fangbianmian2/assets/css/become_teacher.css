@@ -1,0 +1,235 @@
+/*主体内容开始*/
+body{
+    background-color: #eff3f5;
+}
+.content{
+    background-color: #eff3f5;
+    width: 1170px;
+    height: 1266px;
+    margin:0 auto;
+}
+/*主体内容结束*/
+/*主体左半部分开始*/
+.c-img{
+    width: 320px;
+    height: 1266px;
+    float: left;
+}
+
+.become-teacher-img {
+    width: 320px;
+    height: 80px;
+    background: url("../img/become_teacher.png") ;
+    margin-top: 19px;
+}
+/*头像开始*/
+.head-img{
+    margin-top: 36px;
+}
+/*头像结束*/
+/*主体左半部分结束*/
+
+/*800 1266*/
+/*主体右侧开始*/
+.info{
+    float: left;
+    width: 800px;
+    height: 1181px;
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+/*基本信息开始*/
+.basic-info{
+
+}
+/*tittle开始*/
+.basic-info-tittle{
+    height: 70px;
+    background-color: white;
+
+}
+/*装饰开始*/
+.decorate{
+    float: left;
+    width: 800px;
+    height: 25px;
+    background:url("../img/become_teacher.png") 0 -199px;
+}
+/*装饰结束*/
+/*tittle字体开始*/
+.tittle_text{
+    width: 80px;
+    height: 20px;
+    float: left;
+    margin-top:20px;
+    margin-left: 229px;
+    font-size: 20px;
+}
+/*tittle字体结束*/
+/*tittle 结束*/
+/*表单开始*/
+.form-info{
+    width: 520px;
+    height: 494px;
+    float: left;
+    background-color: white;
+}
+.form-text{
+    margin-top:20px;
+    margin-left: 132px;
+    float: left;
+    font-size: 14px;
+    width: 300px;
+    color:#93a39c;
+}
+.form-input{
+    float: left;
+    margin-left: 132px;
+    height: 34px;
+    width: 388px;
+    background-color: #f5f5f5;
+    border:0;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.form-input-short{
+    float: left;
+    margin-left: 132px;
+    height: 38px;
+    width: 106px;
+    background-color: #f5f5f5;
+    border:0;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.pwd-box{
+    display: none;
+}
+.show-name{
+    width: 160px;
+    height: 16px;
+    background-color: #ffffff;
+    float: left;
+    margin-top: 15px;
+    margin-left: 253px;
+}
+#input-box{
+    display: none;
+}
+.show-name-select{
+    width: 10px;
+    height: 10px;
+    border:solid 1px;
+    border-color: #49d599;
+    float: left;
+    margin-top: 1px;
+    background:url("../img/null-flag.png");
+    cursor: pointer;
+}
+.show-name-text{
+    font-size: 10px;
+    float: left;
+    margin-left: 30px;
+}
+.show-name-why{
+    margin-top: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    border:solid 1px black;
+    float:right;
+    font-size: 9px;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+}
+.input-sex{
+    margin-left: 85px;
+}
+.form-line{
+    width: 34px;
+    height: 45px;
+    float: left;
+    margin-top: 10px;
+
+}
+.line{
+    width: 14px;
+    height: 2px;
+    background-color: black;
+    margin:20px 10px;
+    float: left;
+}
+.no-left{
+    margin-left: 0;
+}
+
+.form-push-img{
+    width: 280px;
+    height: 494px;
+    float: left;
+}
+.form-button{
+    width: 800px;
+    height: 83px;
+    float: left;
+}
+/**/
+.form-save{
+    background-color: #5ce1a8;
+    width: 177px;
+    height: 45px;
+    border: none;
+    /* box-shadow: 1px 1px 1px 1px;*/
+    margin-top: 17px;
+    margin-right: 132px;
+    float:right;
+    color: white;
+    font-size: 18px;
+}
+.form-esc{
+    float: right;
+    width: 132px;
+    height: 45px;
+    margin-top: 17px;
+    color:#8e8e8e;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: none;
+}
+
+/*表单结束*/
+/*基本信息结束*/
+/*公司信息开始*/
+.company-info{
+    height: 586px;
+    float: left;
+    width: 800px;
+}
+.company-info-left{
+    width: 521px;
+    float: left;
+    height: 445px;
+}
+.company-basic-info{
+    float: left;
+    width: 82px;
+    height: 22px;
+    font-size: 18px;
+    margin-left: 229px;
+    margin-top: 20px;
+}
+.company-info-right{
+    width: 279px;
+    height: 445px;
+    float: left;
+}
+.be-textarea{
+    margin-left: 132px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    font-size: 15px;
+}
+/*公司信息结束*/
+/*主体右侧开始*/

@@ -1,0 +1,61 @@
+*{
+     margin:0;
+     padding:0;
+ }
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.booking_order_detail_container{
+    margin: 0 auto;
+    width:800px;
+    height:555px;
+    position: relative;
+}
+.booking_order_detail_placeholder{
+    height:45px;
+}
+.booking_order_detail_container h1{
+    text-align: center;
+    color:#3c5966;
+    font-size: 26px;
+}
+.booking_order_detail_content{
+    margin-top: 23px;;
+}
+.booking_order_detail_content li{
+    width:473px;
+    height:14px;
+    margin-top:13px;
+    margin-left: 184px;
+    color:#72747b;
+}
+.booking_order_detail_content li span:nth-child(1){
+    float: left;
+    width:80px;
+}
+.booking_order_detail_content li span:nth-child(2){
+    width:325px ;
+    float: right;
+}
+.submit_offer_separate{
+    width:680px;
+    height:1px;
+    background:#d2d4d5 ;
+    margin: 45px auto 0 auto;
+}
+.booking_order_detail_back{
+    position: absolute;
+    bottom:50px;
+    left:313px;
+    width:172px;
+    height:40px;
+    background: white;
+    color: #58d7a0;
+    border:1px solid #58d7a0;
+    font-size: 14px;;
+    text-align: center;
+    line-height: 40px;
+}

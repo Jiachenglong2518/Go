@@ -1,0 +1,37 @@
+.info_container{
+    width:730px;
+    height: 1000px;
+    margin: 30px auto;
+    margin-right: 100px;
+    background: #fff;
+    font-family:"Microsoft YaHei";
+    color: #767171;
+}
+.info_container_nav{
+    height: 36px;
+    background: #e3fbf1;
+    text-align: left ;
+    line-height: 36px;
+    text-indent:55px;
+    letter-spacing:25px;
+    color:#29b277;
+}
+.info_content{
+    height:420px;
+    margin:0 auto;
+}
+.info_content li{
+    height:140px;
+    border-bottom: 1px solid #eff3f5;
+}
+.seek-right-close{
+    margin-top: 0;
+    float: right;
+    font-size: 17px;
+    cursor:pointer;
+}
+/*info_container_foot开始*/
+.info_container_foot{
+    height: 89px;
+}
+

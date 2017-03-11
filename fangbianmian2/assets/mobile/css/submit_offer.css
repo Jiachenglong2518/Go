@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+.container{
+    margin: 0 auto;
+    width: 5.24rem;
+}
+.container input[type="text"]{
+    color: #394350;
+    text-indent: 0.9rem;
+    display: block;
+    height: 0.92rem;
+    font-size: 0.26rem;
+    border: 0;
+    border-bottom: 2px #dddde0 solid;
+    width: 5.24rem;
+    outline: none;
+    font-weight: 900;
+
+}
+.container .company input{
+    background: url("../img/fbnt01.png") no-repeat 0.2rem 0.35rem;
+    background-size: 0.25rem;
+
+}
+.container .position input{
+    background: url("../img/fbnt02.png") no-repeat 0.2rem 0.35rem;
+    background-size: 0.25rem;
+
+}
+.container .salary input{
+     background: url("../img/fbnt03.png") no-repeat 0.2rem 0.35rem;
+    background-size: 0.25rem;
+
+}
+.container .telephone input{
+      background: url("../img/fbnt04.png") no-repeat 0.2rem 0.35rem;
+    background-size: 0.25rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

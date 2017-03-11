@@ -1,0 +1,8 @@
+.upload-picture{
+    width: 210px;
+    margin-left:40px;
+    margin-top: 30px;
+}
+#files{
+    display: none;
+}

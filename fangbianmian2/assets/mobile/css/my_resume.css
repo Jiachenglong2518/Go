@@ -1,0 +1,92 @@
+.header{
+    padding: 0.24rem 0.5rem 0.24rem 0.35rem;
+}
+.header-pic{
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #e0f7f5;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0.03rem 0.02rem 0.02rem rgba(17, 111, 153, 0.1);
+    /*background: url("../img/my_header_pic.jpg") no-repeat;
+    background-size: cover;*/
+    float: left;
+}
+.header-pic img{
+    width: inherit;
+}
+.header-right{
+    float: right;
+    width: 3.78rem;
+}
+.header-right p{
+    margin:0.2rem 0 0.2rem 0;
+    width: inherit;
+    height: 0.4rem;
+}
+.header-right span:first-child{
+    display: inline-block;
+    font-size: 0.28rem;
+    color: #5c5c70;
+    float: left;
+}
+.my-edit{
+    position: relative;
+    font-size: 0.22rem;
+    color: #49d599;
+    float: right;
+    width: 0.84rem;
+    text-align: right;
+    line-height: 0.34rem;
+    /*background: url("../img/my_edit.png") left 0 top  no-repeat;*/
+}
+.my-edit img{
+    width: 0.24rem;
+    position: absolute;
+    left: 0;
+    top:0.04rem;
+}
+.header-right span{
+     line-height: 0.34rem;
+ }
+
+.header-right p:nth-child(2){
+    font-size: 0.2rem;
+    color: #656e72;
+    line-height: 0.34rem;
+}
+.gray-info{
+    height: 0.34rem;
+    width: auto;
+    border-top: 0.01rem solid #e4e4e4;
+    border-bottom: 0.01rem solid #e4e4e4;
+    background: #f2f2f2;
+    padding: 0.12rem 0.5rem;
+}
+.gray-info span:first-child{
+    font-size: 0.22rem;
+    color: #4a4a53;
+    line-height: 0.34rem;
+}
+.edit-info{
+    /*height: 1.23rem;*/
+    width: auto;
+    padding: 0.13rem 0.5rem;
+}
+.edit-info span{
+    font-size: 0.26rem;
+    color: #4a4a53;
+    display: inline-block;
+    height: 0.6rem;
+    line-height: 0.6rem;
+}
+.edit-info span:nth-child(2n+1){
+     width: 1.3rem;
+}
+.edit-info span:nth-child(2n){
+    width: 4.1rem;
+}
+span.edit-high{
+    height: auto;
+
+}

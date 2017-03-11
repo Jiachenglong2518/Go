@@ -1,0 +1,310 @@
+body{
+    background-color: #eff3f5;
+}
+.container{
+    background: #eff3f5;
+    width: 1170px;
+    height: 1272px;
+    margin: 0 auto;
+}
+/*左侧菜单开始*/
+.container-menu{
+    width: 380px;
+    height: 1228px;
+    float: left;
+}
+/*左侧菜单结束*/
+/*右侧订单内容开始*/
+.order-content{
+    float: left;
+    width: 730px;
+    height: 1228px;
+}
+    /*搜索框开始*/
+    .order-search{
+        width: 790px;
+        height: 70px;
+    }
+    .order-input{
+        width: 392px;
+        height: 38px;
+        border-radius: 8px 0 0 8px;
+        float: left;
+        margin-left: 160px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .order-button{
+        float: left;
+        height: 40px;
+        width: 139px;
+        background-color: #79e5b7;
+        border-radius: 0 8px 8px 0;
+        border: solid 1px #dfe6ea;
+        margin-top: 30px;
+        color: white;
+    }
+    /*搜索框结束*/
+    /*订单列表开始*/
+    .order-list{
+        height: 1143px;
+        width: 790px;
+        position: relative;
+    }
+    .order-list li{
+        width: 730px;
+        height: 165px;
+        margin-left: 60px;
+        margin-top:15px;
+    }
+    .order-list-head{
+        height: 35px;
+        width: 730px;
+        background-color: #94dbec;
+    }
+    .order-list-head div{
+        width: 243px;
+        height: 35px;
+        float: left;
+    }
+    .order-list-head span{
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        color: #ffffff;
+    }
+    .order-list-head span:nth-child(2n+1){
+        margin-left: 55px;
+
+    }
+    .order-list-head span:nth-child(2n){
+        width: 110px;
+        text-indent: 3px;
+
+    }
+    .order-list-content{
+        width: 730px;
+        height: 130px;
+        background-color: #ffffff;
+    }
+    .order-list-content-img{
+        width: 160px;
+        height: 130px;
+        float: left;
+    }
+    .order-list-content-img img{
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    .order-list-content-introduce{
+        width: 160px;
+        height: 130px;
+        float: left;
+        color: #7f7a7a;
+    }
+    .order-list-content {
+        color: #132;
+    }
+    .order-list-content span{
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 14px;
+        color: #7f7a7a  ;
+        float: left;
+    }
+    .order-list-content-introduce span:nth-child(2n+1){
+        float: left;
+    }
+    .order-list-content-introduce span:nth-child(1){
+        margin-top: 27px;
+    }
+    .order-list-content-introduce span:nth-child(2){
+        margin-top: 27px;
+    }
+    .order-list-content a{
+        color:#7f7a7a;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+    .order-list-content-introduce div{
+        float: left;
+        margin-top: 6px;
+       margin-left: 37px;
+    }
+    .order-list-content-person{
+        float: left;
+        width: 130px;
+        height: 130px;
+        margin-left: 40px;
+        color: #7f7a7a;
+    }
+    .order-list-content-person span{
+        float: left;
+        width: 60px;
+        margin-top: 27px;
+
+    }
+    .order-list-content-person div{
+        font-size: 16px;
+        margin-left: 30px;
+        margin-top:5px;
+        width: 100px;
+        height: 21px;
+        float: left;
+    }
+    .order-list-content-price{
+        width: 120px;
+        height: 130px;
+        float: left;
+    }
+    .order-list-content-price span:nth-child(1){
+        margin-top: 45px;
+        font-size: 25px;
+        color: #f98687;
+    }
+    .order-list-content-price span:nth-child(2){
+        width: 10px;
+        margin-top: 48px;
+    }
+    .order-list-content-res {
+        width: 120px;
+        height:130px;
+        float: left;
+    }
+    .order-list-content-res span{
+        width: 80px;
+        height: 30px;
+        border: solid 1px #5ce1a8;
+        color: #5ce1a8;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .order-list-content-res span.list-span1{
+        margin-top: 27px;
+    }
+    .order-list-content-res span.list-span2{
+        margin-top: 10px;
+
+    }
+    .order-list-content .order-list-content-res span.only-one{
+        margin-top: 41px;
+    }
+    /*订单列表结束*/
+    .push-page{
+        width: 730px;
+        height: 60px;
+        margin-left: 74px;
+        margin-top: 8px;
+        position: relative;
+        top:361px;
+    }
+/*右侧订单内容结束*/
+
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.booking_order_detail_container{
+    margin: 0 auto;
+    width:800px;
+    height:550px;
+    position: relative;
+}
+.booking_order_detail_placeholder{
+    height:45px;
+}
+.booking_order_detail_container h1{
+    text-align: center;
+    color:#3c5966;
+    font-size: 26px;
+}
+.booking_order_detail_content{
+    margin-top: 23px;;
+}
+.booking_order_detail_content li{
+    width:473px;
+    height:14px;
+    margin-top:13px;
+    margin-left: 184px;
+
+}
+.booking_order_detail_content li:nth-last-child(1){
+    height:68px;
+}
+.booking_order_detail_content li span:nth-child(1){
+    float: left;
+    width:80px;
+
+}
+.booking_order_detail_content li span:nth-child(2){
+    width:325px ;
+    float: right;
+    color:#7e8086;
+}
+.booking_order_time{
+    width:190px;
+    height:22px;
+}
+.booking_order_way{
+    width:190px;
+    height:22px;
+}
+#booking_order_detail_content{
+    width:354px;
+    height:68px;
+    resize: none;
+}
+.submit_offer_separate{
+    width:680px;
+    height:1px;
+    background:#d2d4d5 ;
+    margin: 45px auto 0 auto;
+}
+.submit_offer_agreement{
+    margin-top:15px;
+    text-align: center;
+    color:#a2adb8;
+    font-size: 13px;;
+}
+.push_order_submit{
+    width:172px;
+    height:40px;
+    border:1px solid #58d7a0;
+    margin-top: 23px;;
+    margin-left:350px;
+    background: white;
+    color:#58d7a0;
+    font-size: 14px;
+    cursor: pointer;
+}
+.upload_audio_back{
+    font-size: 14px;;
+    color: #aaacb0;
+    position: absolute;
+    left:270px;
+    bottom:30px;
+}
+input[type="radio"]{
+    display: none;
+}
+.submit_offer_agreement label{
+    color: #858b93;
+    font-size: 26px;
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    left:600px;
+    -webkit-box-flex: 1;
+    background: url("assets/img/空框.png");
+    text-align: center;
+    line-height: 94px;
+}

@@ -1,0 +1,95 @@
+.wrap{
+    padding: 0 0.5rem;
+}
+/*标题样式start*/
+.title{
+    height: 1.58rem;
+    font-size: 0.4rem;
+    text-align: center;
+    line-height: 1.58rem;
+    color: #193b71;
+    /*background: #67b168;*/
+}
+/*标题样式end*/
+p{
+    color: #606065;
+    font-size: 0.28rem;
+    margin: 0 0 0 0.3rem;
+}
+/*文本框样式start*/
+/*.text-input{
+    width: 5.34rem;
+    height: 0.74rem;
+    border:0.01rem solid #eaeaeb;
+    background: #f5f5f5;
+    border-radius: 0.15rem;
+    margin: 0.2rem 0;
+    line-height: 0.74rem;
+    box-shadow: 1px 1px rgba(234, 234, 235, 0);
+    !*position: relative;*!
+}*/
+input{
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+    width: 97%;
+    height: 90%;
+    outline: none;
+    border: none;
+    border-radius: 0.15rem;
+    background: inherit;
+    text-indent: 0.2rem;
+    font-size: 0.26rem;
+    color: #93939c;
+}
+/*文本框样式end*/
+
+/*半个按钮start*/
+.btn-input{
+    width: 45%;
+    float: right;
+    background: #fff;
+
+}
+
+.gray-text{
+    color: #afafb5;
+}
+/*半个按钮end*/
+.harf-text-input{
+    width: 45%;
+    float: left;
+}
+/*选中变绿色的class start*/
+.green-btn{
+    border-color: #5be0a7;
+    color: #5be0a7;
+}
+.green-btn input{
+    color: inherit;
+}
+
+/*选中变绿色的class start*/
+/*.reg-btn{
+    clear: both;
+    color: #fff;
+    background: #5be0a7;
+    border-color: #34c486;
+}*/
+.have-account{
+    text-align: right;
+    font-size: 0.22rem;
+    padding: 0.2rem 0 0.5rem 0;
+}
+.have-account a{
+    color: #93939c;
+}
+.b-img{
+    height: 1.4rem;
+    position: relative;
+}
+.b-img img{
+    height: 1.4rem;
+    position: absolute;
+    bottom: 0;
+}

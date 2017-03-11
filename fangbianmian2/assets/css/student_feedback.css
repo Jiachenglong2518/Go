@@ -1,0 +1,16 @@
+
+
+.feedback td{
+    height: 80px;
+    line-height: 25px;
+    border-bottom: 1px solid #83838a;
+}
+.feedback span{
+    margin-left: 35px;
+}
+.num{
+    font-size:36px;
+    color:orangered;
+    font-family: "Microsoft YaHei";
+}
+

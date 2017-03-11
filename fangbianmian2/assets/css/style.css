@@ -1,0 +1,141 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    border: none;
+}
+/*搜索框样式开始*/
+.search_input{
+    width: 570px;
+    height: 50px;
+    border:solid 2px  #a8efd1;
+    font-size: 18px;
+    text-indent: 53px;
+    border-radius: 6px;
+    margin: 25px 307px 21px 293px;
+    color: #89949f;
+}
+/*搜索框样式结束*/
+/*导师排序span样式开始*/
+.order_area{
+    overflow: auto;
+    position: relative;
+    top: 12px;
+    z-index: 888;
+}
+
+.teacher_order{
+    float: left;
+    width: 270px;
+    height: 35px;
+    background-color: #f7f8f9;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: 微软雅黑;
+    border-radius: 3px;
+    border: solid 1px #d5d6d8;
+}
+/*导师排序span样式结束*/
+/*270 294 导师列表开始*/
+.teacher_list_area{
+    position: absolute;
+    top: 240px;
+    z-index: 5;
+}
+.teacher_list{
+    float: left;
+    width: 270px;
+    height: 310px;
+    margin-right: 30px;
+    margin-top: 30px;
+    background-color: white;
+}
+.teacher_list_ul{
+    margin-top: -30px;
+    height: 1000px;
+    width: 1170px;
+}
+.teacher_list:nth-child(4n){
+    margin-right: 0;
+}
+.teacher_img{
+    width: 270px;
+    height: 210px;
+
+}
+.teacher_info{
+    width: 155px;
+    height: 84px;
+    float: left;
+    color: #2b4056;
+
+}
+.teacher_info .teacher_name_text{
+    float: left;
+    width: 140px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+.teacher_info .teacher_info_text{
+    float: left;
+    margin-left: 10px;
+    width: 145px;
+    height: 20px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+.teacher_info .teacher_info_opinion{
+    float: left;
+    margin-left: 10px;
+    width: 55px;
+    height: 20px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+.teacher_info .teacher_opinion_num{
+    float: left;
+    width: 90px;
+    height: 20px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+.teacher_price{
+    width: 115px;
+    height: 84px;
+    float: left;
+
+}
+.teacher_price .teacher_price_num{
+    font-size: 28px;
+    color: red;
+    text-indent: 5px;
+    margin-top: 5px;
+    color: #f86e6f;
+
+}
+.teacher_price .teacher_price_text{
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: #fcacad;
+}
+.seer_num{
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+    color: #2b4056;
+}
+/*导师列表结束*/

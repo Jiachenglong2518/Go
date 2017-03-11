@@ -1,0 +1,25 @@
+.page{
+    padding-top: 15px;
+    clear: both;
+    height: 60px;
+    width: 450px;
+    font-size:12px;
+    margin: 0 auto;
+}
+.page span{
+    float: left;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #a9aeb0;
+    line-height: 26px;
+    text-align: center;
+    margin-right: 10px;
+    letter-spacing:1px;
+}
+.page .first-page{
+    width: 58px;
+    height: 26px;
+}
+.page .omit{
+    border:none;
+}

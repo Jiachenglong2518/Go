@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+.container{
+    margin: 0 auto;
+    width: 5.24rem;
+}
+.appraise-wrap input{
+    color: #394350;
+    background: url("../img/fbnt01.png") no-repeat 0.2rem 0.4rem;
+    background-size: 0.25rem;
+
+    margin-top:0.22rem ;
+    text-indent: 0.9rem;
+    display: block;
+    height: 1rem;
+    font-size: 0.26rem;
+    border: 0;
+    border-bottom: 2px #dddde0 solid;
+    width: 5.24rem;
+    outline: none;
+    font-weight: 900;
+}
+.container h1{
+    color: #394350;
+    font-size: 0.26rem;
+}
+.remark-warp{
+    padding-bottom: 1rem;
+}
+.remark-warp h1{
+    background: url("../img/fbnt02.png") no-repeat 0.2rem 0.38rem;
+    background-size: 0.25rem;
+
+    display: block;
+    width: 5.24rem;
+    height: 0.92rem;
+    font-size: 0.26rem;
+    border-bottom: 2px #dddde0 solid;
+    line-height: 0.96rem;
+    text-indent: 0.9rem;
+    color: #394350;
+}
+.remark-warp .remark textarea{
+    padding-top: 0.25rem;
+    text-indent: 0.9rem;
+    font-size: 0.26rem;
+    width: 5.24rem;
+    height: 2.23rem;
+    border: 0;
+    border-bottom:2px #dddde0 solid ;
+    color: #858b93;
+    resize:none;
+    outline: none;
+}
+.empty{
+    height: 0.7rem;
+}
+.empty a{
+    text-decoration: none;
+    font-size: 0.22rem;
+    color: #93939c;
+}

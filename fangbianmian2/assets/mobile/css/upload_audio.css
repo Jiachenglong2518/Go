@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+
+.container{
+    width: 5.24rem;
+    margin: 0 auto;
+}
+.interview-result h1{
+    color: #394350;
+    background: url("../img/fbnt01.png") no-repeat 0.2rem 0.05rem;
+    background-size: 0.25rem;
+
+    margin-top:0.6rem ;
+    text-indent: 0.9rem;
+    display: block;
+    width: 5.24rem;
+    height: 0.63rem;
+    font-size: 0.26rem;
+    border-bottom: 2px #dddde0 solid;
+}
+input[type="radio"]{
+    display: none;
+}
+.interview{
+    height: 0.92rem;
+    padding-left: 0.9rem;
+    display:-webkit-box;
+    border-bottom: 2px #dddde0 solid;
+}
+.interview label{
+    color: #858b93;
+    font-size: 0.26rem;
+    height: 0.92rem;
+    display: block;
+    -webkit-box-flex: 1;
+    background: url("../img/空框.png") no-repeat  0 0.37rem;
+    background-size: 0.25rem;
+
+    text-align: center;
+    line-height: 0.94rem;
+}
+.mentor-comment h1{
+    background: url("../img/fbnt02.png") no-repeat 0.2rem 0.38rem;
+    background-size: 0.25rem;
+
+    display: block;
+    width: 5.24rem;
+    height: 0.92rem;
+    font-size: 0.26rem;
+    border-bottom: 2px #dddde0 solid;
+    line-height: 0.96rem;
+    text-indent: 0.9rem;
+    color: #394350;
+}
+.mentor-comment{
+    padding-bottom: 1.9rem;
+}
+.mentor-comment .comment textarea{
+    padding-top: 0.25rem;
+    text-indent: 0.9rem;
+    font-size: 0.26rem;
+    width: 5.24rem;
+    height: 2.23rem;
+    border: 0;
+    border-bottom:2px #dddde0 solid ;
+    color: #858b93;
+    resize:none;
+    outline: none;
+}
+.empty{
+    height: 0.7rem;
+}
+.empty a{
+    text-decoration: none;
+    font-size: 0.22rem;
+    color: #93939c;
+}
+.text-input.reg-btn.change{
+    background: #fff;
+}
+input.reg-btn.change{
+    color: #2ebf81;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

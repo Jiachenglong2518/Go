@@ -1,0 +1,135 @@
+img{
+    width: 6.4rem;
+    height: 4.5rem;
+}
+.container{
+    padding: 0 0.3rem;
+}
+h2{
+    font-size: 0.3rem;
+    color: #102230;
+    margin: 0.26rem 0 0.15rem 0;
+}
+.interpolate-company p{
+    color: #f86e6f;
+}
+.interpolate-company p span:nth-child(1){
+    font-size: 0.24rem;
+}
+.interpolate-company p span:nth-child(2){
+    font-size: 0.36rem;
+}
+.interpolate-company p span:nth-child(3){
+    font-size: 0.2rem;
+}
+.interpolate-company div{
+    height: 0.2rem;
+    padding: 0.2rem 0;
+}
+.interpolate-company div span{
+    font-size: 0.2rem;
+    color: #999aa8;
+    float: left;
+    width: 33.3%;
+}
+.interpolate-company div span:nth-child(2){
+    text-align: center;
+}
+.interpolate-company div span:nth-child(3){
+    text-align: right;
+}
+.gray-block{
+    border-top: 0.01rem solid #e4e4e4;
+    border-bottom: 0.01rem solid #e4e4e4;
+    height: 0.13rem;
+    background: #f2f2f2;
+}
+.push-requirement{
+    border-bottom: 0.01rem solid #d2d4d5;
+    padding-bottom: 0.15rem;
+}
+.push-requirement h3{
+    font-size: 0.3rem;
+    color: #3c5966;
+    margin: 0.3rem 0 0.35rem 0;
+    text-align: center;
+}
+.push-requirement p{
+    height: 0.32rem;
+    width: auto;
+}
+.push-requirement p span{
+    float: left;
+    width: 2.9rem;
+    height: inherit;
+    font-size: 0.22rem;
+    color: #72747b;
+    line-height: 0.32rem;
+}
+.study-requirement,.project-introduction{
+    border-bottom: 0.01rem solid #d2d4d5;
+    padding: 0.22rem 0;
+}
+.study-requirement h4,.project-introduction h4{
+    color: #56565d;
+    font-size: 0.24rem;
+    line-height: 0.41rem;
+}
+.study-requirement p,.project-introduction p{
+    color: #696874;
+    font-size: 0.22rem;
+    line-height: 0.3rem;
+}
+.button{
+    height: 0.8rem;
+    border: 0.02rem solid #5be0a7;
+    margin-top: 0.2rem;
+}
+.button input{
+    border: none;
+    font-size: 0.26rem;
+    color: #5be0a7;
+    background: #fff;
+    height: 0.8rem;
+    outline: none;
+    width: 3.16rem;
+}
+.button input:last-child{
+    float: right;
+}
+input.btn-style{
+    color: #fff;
+    background: #5be0a7;
+}
+.student-appraise,.choice-type{
+    height: 0.5rem;
+    padding: 0 0.3rem;
+    font-size: 0.22rem;
+    color: #4a4a53;
+    line-height: 0.5rem;
+}
+.student-appraise span:nth-child(1),.choice-type span:nth-child(1){
+    display: inline-block;
+    /*margin-top: 0.13rem;*/
+    margin-left: 1.76rem;
+    margin-right: 0.3rem;
+    width: 0.2rem;
+    height: 0.21rem;
+}
+.student-appraise span:nth-child(1){
+    background: url("../img/student-appraise.png") no-repeat;
+    background-size: contain;
+}
+.choice-type span:nth-child(1){
+    background: url("../img/choice-type.png") no-repeat;
+    background-size: contain;
+}
+.student-appraise a,.choice-type a{
+    float: right;
+    margin-top: 0.13rem;
+    width: 0.18rem;
+    height: 0.19rem;
+    background: url("../img/tap_enter.png") no-repeat;
+    background-size: contain;
+}
+

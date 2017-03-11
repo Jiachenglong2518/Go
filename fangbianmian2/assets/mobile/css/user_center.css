@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+a{
+text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container .header{
+    height: 1.91rem;
+    background: url("../img/gradient.png") no-repeat;
+    background-repeat:round;
+}
+.container .header .header_user{
+    width: 4rem;
+   float: left;
+    height: 1.91rem;
+}
+.container .header .header_user a{
+    margin-top: 0.25rem;
+    float: left;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 0.1rem solid #d6f0fa;
+    margin-left: 0.35rem;
+}
+.container .header .header_user h1{
+    color: #fff;
+    font-size: 0.28rem;
+    float: right;
+    width: 2.25rem;
+    margin-top: 0.6rem;
+   text-indent: 0.2rem;
+}
+.container .header .header_user p{
+    float: right;
+    color: #d6f2f5;
+    font-size: 0.2rem;
+    width: 2.25rem;
+    text-indent: 0.2rem;
+    margin-top: 0.1rem;
+}
+.container .header .header_user img{
+    width: 1.2rem;
+    height:1.2rem;
+    border-radius: 50%;
+    display: block;
+}
+.container .header .edit_resume{
+    background: url("../img/arrow_rigth.png") no-repeat 1.92rem 0.85rem;
+
+    width: 2.04rem;
+    height: 1.91rem;
+    float: left;
+}
+.container .header .edit_resume a{
+    width: 1.84rem;
+    float: left;
+    height: 1.26rem;
+    color: #d6f2f5;
+    font-size: 0.2rem;
+    text-align: right;
+    margin-top: 0.65rem;
+    line-height: 0.27rem;
+}
+
+.label-act-warp{
+    margin: 0 auto;
+    height: 0.8rem;
+    width: 5.7rem;
+}
+.my-appointment .label-act,.my-push .label-act{
+    float: left;
+    width: 5.7rem;
+    height: 0.8rem;
+    /*
+    border-bottom: 0.02rem solid #f2f2f2;
+    */
+    line-height: 0.8rem;
+}
+.my-appointment .label-act h1,.my-push .label-act h1{
+    color: #464b4d;
+    font-size: 0.26rem;
+    float: left;
+}
+.my-appointment .label-act span,.my-push .label-act span{
+    float: right;
+    font-size: 0.2rem;
+    color: #adadad;
+}
+.orderAct{
+    height: 1.08rem;
+    border-top: 0.01rem solid #f2f2f2 ;
+    border-bottom: 0.01rem solid #e1e1e1 ;
+}
+.orderAct li{
+    float: left;
+    width: 1.28rem;
+    font-size: 0.18rem;
+    text-align: center;
+}
+.orderAct li a{
+    color: #263943;
+}
+.orderAct li a span{
+    float: left;
+    width: 1.28rem;
+    height: 0.7rem;
+}
+.orderAct li a span.icon-first{
+    background: url("../img/mydd02.png") no-repeat center;
+    background-size: 0.25rem;
+
+}
+.orderAct li a span.icon-second{
+    background: url("../img/mydd04.png") no-repeat center;
+    background-size: 0.25rem;
+
+}
+.orderAct li a span.icon-three{
+    background: url("../img/mydd06.png") no-repeat center;
+    background-size: 0.25rem;
+
+}
+.orderAct li a span.icon-four{
+    background: url("../img/yhzx01.png") no-repeat center;
+    background-size: 0.25rem;
+
+}
+.orderAct li a span.icon-five{
+    background: url("../img/mydd10.png") no-repeat center;
+    background-size: 0.25rem;
+
+}
+.heng{
+    height: 0.14rem;
+    background: #f2f2f2;
+    border-bottom:0.01rem solid #e1e1e1 ;
+}
+
+.core-entry{
+    width: 5.7rem;
+    margin: 0 auto;
+    margin-top: 0.14rem;
+    height: 3.6rem;
+    margin-bottom: 0.4rem;
+}
+.core-entry li a{
+    width: 5.7rem;
+    float: left;
+    height: 0.89rem;
+    color: #4c4c4c;
+    font-size: 0.26rem;
+    line-height: 0.89rem ;
+    border-bottom: 0.01rem solid #e1e1e1;
+}
+.core-entry li a span{
+    float: left;
+    width: 5.7rem;
+    text-indent: 0.6rem;
+}
+.core-entry li a span.one{
+    background: url("../img/yhzx02.png") no-repeat 0 center ;
+    background-size: 0.25rem;
+
+}
+.core-entry li a span.two{
+    background: url("../img/yhzx03.png") no-repeat 0 center ;
+    background-size: 0.25rem;
+
+}
+.core-entry li a span.three{
+    background: url("../img/yhzx04.png") no-repeat 0 center ;
+    background-size: 0.25rem;
+
+}
+.core-entry li a span.four{
+     background: url("../img/yhzx05.png") no-repeat 0 center ;
+    background-size: 0.25rem;
+
+}
+
+
+
+

@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+.add_evaluation_container{
+    margin: 100px auto;
+    width:800px;
+    height:350px;
+    position: relative;
+}
+.add_evaluation_placeholder{
+    height:46px;
+}
+.add_evaluation_container h1{
+    text-align: center;
+    color:#3c5966;
+    font-size: 26px;
+}
+.add_evaluation_evaluation{
+    margin-top: 29px;
+    margin-left:186px;
+    color:#7b7d84;
+}
+.add_evaluation_note{
+    margin-top: 16px;
+    margin-left:186px;
+}
+.add_evaluation_note span{
+    float: left;
+    color:#7b7d84;
+}
+.add_evaluation_note textarea{
+    width:330px;
+    height:75px;
+    border:1px solid #e1e4e5;
+    margin-left:80px;
+    resize: none;
+}
+.add_evaluation_separate{
+    width:680px;
+    height:1px;
+    background:#d2d4d5 ;
+    margin: 45px auto 0 auto;
+}
+.add_evaluation_submit{
+    width:172px;
+    height:40px;
+    border:1px solid #58d7a0;
+    margin-top: 20px;;
+    margin-left:332px;
+    background: white;
+    color:#58d7a0;
+    font-size: 13px;
+    cursor: pointer;
+}
+.add_evaluation_back{
+    font-size: 14px;;
+    color: #aaacb0;
+    position: absolute;
+    left:250px;
+    bottom:25px;
+}
+input[type="radio"]{
+    display: none;
+}
+.add_evaluation_evaluation{
+    height:20px;
+}
+.add_evaluation_evaluation>span{
+    float: left;
+}
+.add_evaluation_evaluation label{
+    color: #858b93;
+    font-size: 26px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    -webkit-box-flex: 1;
+    background: url("../image/空框.png");
+    text-align: center;
+    line-height: 0.94rem;
+}
+.add_evaluation_evaluation div{
+    float:left;
+}
+.add_evaluation_evaluation div:nth-child(2){
+    margin-left: 80px;
+}
+.add_evaluation_evaluation div:nth-child(3){
+    margin-left: 40px;
+}
+.add_evaluation_evaluation div:nth-child(4){
+    margin-left: 40px;
+}

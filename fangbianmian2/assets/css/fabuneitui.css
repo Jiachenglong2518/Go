@@ -1,0 +1,80 @@
+.public-container{
+    height: 710px;
+}
+.pub-title{
+    clear: both;
+    font-size: 30px;
+    color: #435c72;
+    padding: 36px 0 19px 0;
+    text-align: center;
+}
+.pub-form{
+    width: 402px;
+    height: 615px;
+    margin: 0 auto;
+}
+.pub-icon{
+    float: left;
+    width: 26px;
+    height: 25px;
+    margin: 27px 18px 15px 0;
+    background: #f00;
+}
+.pub-cont{
+    width: 402px;
+    height: 70px;
+    border-bottom: 1px solid #eff3f5;
+}
+.pub-icon.company{
+    background: url(../img/fabu_sprite.png) no-repeat 0 0;
+}
+.pub-icon.job{
+    background: url(../img/fabu_sprite.png) no-repeat 0 -27px;
+}
+.pub-icon.money{
+    background: url(../img/fabu_sprite.png) no-repeat 0 -57px;
+}
+.pub-icon.time{
+    background: url(../img/fabu_sprite.png) no-repeat 0 -85px;
+}
+.pub-form .info{
+    display: block;
+    width: 338px;
+    height: 22px;
+    border: none;
+    font-size: 16px;
+    padding: 24px 0;
+    text-indent: 11px;
+}
+
+.info.company{
+    width: 16px;
+    height: 24px;
+    float: left;
+}
+.pub-form .area-content{
+    width: 402px;
+    height: 98px;
+    background: #f8f8f8;
+    padding-top: 15px;
+}
+.pub-checkbox{
+    margin-top: 15px;
+    float: left;
+    font-size: 14px;
+    color: #c4cfd7;
+}
+.submit{
+    clear: both;
+    width: 402px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    background: url('../img/button.png') no-repeat center center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 24px;
+    margin-top: 20px;
+}
+

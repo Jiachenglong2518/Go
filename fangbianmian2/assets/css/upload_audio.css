@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.upload_audio_container{
+    margin: 0 auto;
+    width:800px;
+    height:770px;
+    position: relative;
+}
+.upload_audio_placeholder{
+    height:45px;
+}
+.upload_audio_container h1{
+    text-align: center;
+    color:#3c5966;
+    font-size: 26px;
+}
+.upload_audio_content{
+    margin-top: 23px;;
+}
+.upload_audio_content li{
+    width:473px;
+    height:14px;
+    margin-top:13px;
+    margin-left: 184px;
+    color:#72747b;
+}
+.upload_audio_content li span:nth-child(1){
+    float: left;
+    width:80px;
+}
+.upload_audio_content li span:nth-child(2){
+    width:325px ;
+    float: right;
+}
+.upload_audio_separate{
+    width:680px;
+    height:1px;
+    background:#d2d4d5 ;
+    margin: 45px auto 0 auto;
+}
+.upload_audio_interview_assessment_placeholder{
+    height:25px;
+}
+.upload_audio_interview_assessment_evaluation{
+    margin-top: 29px;
+    margin-left:186px;
+    color:#7b7d84;
+}
+.upload_audio_interview_assessment_evaluation input:nth-child(1){
+    margin-left: 70px;
+}
+.upload_audio_interview_assessment_evaluation input:nth-child(2){
+    margin-left: 40px;
+}
+.upload_audio_interview_assessment_evaluation input:nth-child(3){
+    margin-left: 40px;
+}
+.upload_audio_interview_assessment_evaluation_note{
+    margin-top: 10px;
+    margin-left:186px;
+}
+.upload_audio_interview_assessment_evaluation_note span{
+    float: left;
+    color:#7b7d84;
+}
+.upload_audio_interview_assessment_evaluation_note textarea{
+    width:330px;
+    height:75px;
+    border:1px solid #e1e4e5;
+    margin-left:80px;
+    resize: none;
+}
+.upload_audio_interview_assessment_evaluation_uploading{
+    margin-top: 10px;
+    margin-left:186px;
+}
+.upload_audio_interview_assessment_evaluation_uploading span{
+    float: left;
+    color:#7b7d84;
+}
+.upload_audio_interview_assessment_evaluation_uploading input{
+    width:190px;
+    height:25px;
+    border:1px solid #e1e4e5;
+    margin-left:80px;
+}
+.upload_audio_interview_assessment_evaluation_uploading button{
+    width:76px;
+    height:26px;
+    border:1px solid #e1e4e5;
+    margin-left:15px;
+    background: white;
+}
+.upload_audio_submit{
+    width:172px;
+    height:40px;
+    border:1px solid #58d7a0;
+    margin-top: 20px;;
+    margin-left:350px;
+    background: white;
+    color:#58d7a0;
+    font-size: 14px;
+    cursor: pointer;
+}
+.upload_audio_back{
+    font-size: 14px;;
+    color: #aaacb0;
+    position: absolute;
+    left:270px;
+    bottom:25px;
+}
+input[type="radio"]{
+    display: none;
+}
+.upload_audio_interview_assessment_evaluation{
+    height:20px;
+}
+.upload_audio_interview_assessment_evaluation>span{
+    float: left;
+}
+.upload_audio_interview_assessment_evaluation label{
+    color: #858b93;
+    font-size: 26px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    -webkit-box-flex: 1;
+    background: url("/assets/img/空框.png");
+    text-align: center;
+    line-height: 94px;
+}
+.upload_audio_interview_assessment_evaluation div{
+    float:left;
+}
+.upload_audio_interview_assessment_evaluation div:nth-child(2){
+    margin-left: 80px;
+}
+.upload_audio_interview_assessment_evaluation div:nth-child(3){
+    margin-left: 40px;
+}
+.upload_audio_interview_assessment_evaluation div:nth-child(4){
+    margin-left: 40px;
+}

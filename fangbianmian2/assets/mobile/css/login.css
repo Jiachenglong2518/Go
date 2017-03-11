@@ -1,0 +1,16 @@
+.reg-btn{
+    margin: 1.2rem 0 0 0;
+}
+.login-btn{
+    clear: both;
+    color: #fff;
+    background: #5be0a7;
+    border-color: #34c486;
+}
+.have-account a:first-child{
+    float: left;
+}
+p.have-account{
+    margin: 0 0 0 0 ;
+    padding: 0.4rem 0 0.5rem 0;
+}

@@ -1,0 +1,65 @@
+.push{
+    height: 650px;
+    background:#fff;
+    margin-bottom: 35px;
+}
+.push_nav{
+    height: 48px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.push_nav li{
+    float: left;
+    width: 227px;
+    text-align: center;
+    line-height: 48px;
+    border-right: 1px solid #83838a;
+    border-bottom: 2px solid #5bced2;
+    color:#7d7c85;
+    font-family: "Microsoft YaHei" ! important;
+}
+.push-container{
+    clear:both;
+    width:1000px;
+    height: 520px;
+    margin: 0 auto;
+    font-family: "[FZLTXHK -GBK1-0]" ! important;
+    font-weight: bolder;
+    color:#7d7c85;
+}
+#resume_guider{
+    height: 157px;
+}
+#resume_company{
+    height: 120px;
+}
+#resume_project{
+    height: 240px;
+}
+#resume_guider .name{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 26px 0;
+    color:#3c5966;
+}
+#resume_guider td{
+    width: 500px;
+    padding:5px;
+    font-size: 16px;
+}
+.com{
+    font-size:20px;
+    padding:20px 0;
+}
+#resume_project td{
+    width: 600px;
+    padding: 5px 0;
+    line-height: 25px;
+}
+#resume_company td{
+    width: 600px;
+    padding: 5px 0;
+    line-height: 25px;
+}
+#resume_guider,#resume_company  table{
+    border-bottom: 1px solid #e1e1e1;
+}

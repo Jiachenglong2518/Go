@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+.cancellation_request_reason_container{
+    margin: 100px auto;
+    width:800px;
+    height:350px;
+    position: relative;
+}
+.cancellation_request_reason_placeholder{
+    height:46px;
+}
+.cancellation_request_reason_container h1{
+    text-align: center;
+    color:#3c5966;
+    font-size: 26px;
+}
+.cancellation_request_reason_evaluation{
+    margin-top: 22px;
+    margin-left:186px;
+    color:#7b7d84;
+}
+#cancellation_request_reason{
+    width:188px;
+    height:23px;
+    border:1px solid #e1e4e5;
+    font-size: 13px;;
+    color:#babcc0;
+    margin-left: 80px;;
+}
+.cancellation_request_reason_note{
+    margin-top: 16px;
+    margin-left:186px;
+}
+.cancellation_request_reason_note span{
+    float: left;
+    color:#7b7d84;
+}
+.cancellation_request_reason_note textarea{
+    width:330px;
+    height:75px;
+    border:1px solid #e1e4e5;
+    margin-left:87px;
+    resize: none;
+}
+.cancellation_request_reason_separate{
+    width:680px;
+    height:1px;
+    background:#d2d4d5 ;
+    margin: 45px auto 0 auto;
+}
+.cancellation_request_reason_submit{
+    width:172px;
+    height:40px;
+    border:1px solid #58d7a0;
+    margin-top: 20px;;
+    margin-left:332px;
+    background: white;
+    color:#58d7a0;
+    font-size: 13px;
+    cursor: pointer;
+}
+.cancellation_request_reason_back{
+    font-size: 14px;;
+    color: #aaacb0;
+    position: absolute;
+    left:250px;
+    bottom:25px;
+}

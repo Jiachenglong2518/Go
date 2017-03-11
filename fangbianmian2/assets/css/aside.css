@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.personal-center{
+    width: 380px;
+    margin-top: 30px;
+    margin-left: 113px;
+    float: left;
+}
+.personal-center .nav li{
+    height: 60px;
+    line-height: 60px;
+    background: #ebeff2;
+    width: 380px;
+    display: none;
+}
+.personal-center ul li:hover{
+    background-color: #ffffff;
+}
+.personal-center .nav :hover{
+    background-color: #ffffff;
+}
+
+.personal-center .nav .menu a{
+    color: #607684;
+    height: 60px;
+    line-height: 60px;
+
+}
+.personal-center .nav span {
+    position: relative;
+    width: 225px;
+    height: 60px;
+    display: block;
+    background: url("../img/jobhunter-side-gray.png") 105px 20px no-repeat;
+
+}
+.selected{
+    background: url("../img/jobhunter-side-gray.png") -484px 25px no-repeat ;
+}
+.personal-center  .menu-two,.menu-three,.menu-four,.menu-five,.menu-six{
+    width: 380px;
+    display: block;
+}
+
+
+.personal-center  .menu-two{
+    background: url("../img/jobhunter-side-gray.png") 105px -40px no-repeat;
+}
+.personal-center .menu-three{
+    background: url("../img/jobhunter-side-gray.png") 105px -100px no-repeat;
+}
+.personal-center .menu-four{
+    background: url("../img/jobhunter-side-gray.png") 107px -160px no-repeat;
+}
+.personal-center .menu-five{
+    background: url("../img/jobhunter-side-gray.png") 105px -278px no-repeat;
+}
+.personal-center .menu-six{
+    background: url("../img/jobhunter-side-gray.png") 105px -220px no-repeat;
+}
+
+.personal-center .menu-two a,.menu-three a,.menu-four a,.menu-five a,.menu-five a,.menu-six a{
+    color: #6a6e71;
+    height: 60px;
+    line-height: 60px;
+}
+.personal-center{
+    text-align: center;
+}
+
+.personal-center  .nav a{
+    font-size: 17px;
+    color:#6a6e71 ;
+
+}
+.personal-center  span{
+    font-size: 17px;
+    color: #6a6e71;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+}
+.personal-center .nav  .main-menu{
+    background: url("../img/triangle.png") 69px 25px;
+    position: absolute;
+    left: 226px;
+    top: 0;
+    width: 154px;
+    height: 60px;
+    display: block;
+}
+.personal-center .nav .menu-one,.personal-center .nav .menu-two{
+    text-align: right;
+}
+.border{
+    border-right: 5px solid #5ce1a8;
+}

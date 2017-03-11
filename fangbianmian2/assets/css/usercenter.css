@@ -1,0 +1,142 @@
+body{
+    font-size: 12px;
+}
+.user-container{
+    width: 1170px;
+    height: 1180px;
+    margin: 28px auto;
+}
+.user-content{
+    float: right;
+    width: 730px;
+    height: 1152px;
+}
+.seeker{
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    padding: 16px 0;
+    float: left;
+}
+.head-pic{
+    float: left;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: #def2fe;
+    margin-left: 65px;
+    padding: 9px 9px 9px 9px; 
+}
+.head-pic-center{
+    width: 104px;
+    height: 104px;
+    background: #f00;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.seeker-info{
+    float: left;
+    width: 446px;
+    height: 74px;
+    margin-top: 26px;
+    margin-left: 40px;
+}
+.seeker-name.seeker-common{
+    font-size: 18px;
+    font-weight: 'Adobe 黑体 Std R';
+    border-bottom: 1px solid #dce1e4;
+}
+.seeker-common{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #536773;
+}
+.appiontment{
+    width: 100%;
+    float: left;
+    height: 180px;
+    background: #fff;
+    margin-top: 20px;
+}
+.ap-header{
+    width: 674px;
+    height: 40px;
+    float: left;
+    color: #b1b9c3;
+    line-height: 40px;
+    background: #f8fafa;
+    font-size: 14px;
+    padding-left: 56px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.ap-centent{
+    float: left;
+    width: 703px;
+    height: 100px;
+    padding: 20px 0 20px 27px;
+}
+.app-head-pic{
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.app-info{
+    float: left;
+    width: 408px;
+    height: 100px;
+    margin-left: 36px;
+}
+.seeker-name-small{
+    font-weight: bold;
+    color: #666666;
+    font-size: 14px;
+}
+.seek-company{
+    margin-top: 17px;
+}
+.order{
+    margin-top: 12px;
+    width: 370px;
+}
+.seek-right{
+    float: right;
+    width: 125px;
+    height: 100%;
+    margin-right: 30px;
+}
+.price span{
+    color: #f86e6f;
+}
+.seek-price{
+    font-size: 30px;
+    color: #f86e6f;
+    padding-right: 10px;
+}
+.look{
+    width: 100%;
+    height: 25px;
+    background: #5ce1a8;
+    margin-top: 35px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+}
+.secret-icon{
+    float: left;
+    width: 9px;
+    height: 15px;
+    background: #f00;
+}
+.price.secret span{
+    color: #5ce1a8;
+    margin-right: 16px;
+}
+.look-info.look{
+    margin-top: 70px;
+}

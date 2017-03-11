@@ -1,0 +1,27 @@
+.search{
+    width:570px;
+    height:50px;
+    background: #fff;
+    border:2px solid #a8efd1;
+    margin:25px auto;
+    border-radius:10px;
+}
+.search input{
+    width:450px;
+    height:40px;
+    margin:5px 0;
+    border:none;
+    outline: none;
+    text-indent:55px;
+    text-align:left;
+    color:#7e8b97;
+    font-size: 16px;
+    font-family: "Microsoft YaHei" ! important;
+}
+.search span{
+    float: right;
+    width: 70px;
+    height: 50px;
+    cursor:pointer;
+    background: url("../img/search.png") no-repeat;
+}
