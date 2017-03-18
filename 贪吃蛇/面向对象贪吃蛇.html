@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 1000px;
+            height: 550px;
+            border: solid 1px black;
+            margin: 10px auto;
+            position: relative;
+        }
+        #content{
+            width: 1000px;
+            height: 500px;
+            background-color: orange;
+        }
+        #bottom{
+            width: 100px;
+            height: 50px;
+        }
+        #info{
+            line-height: 50px;
+            width: 500px;
+            height: 50px;
+            text-indent: 20px;
+            float: left;
+            border: solid 1px red;
+        }
+        #btn{
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+        }
+        #btn span{
+            cursor: pointer;
+            background-color: gray;
+            width: 50px;
+            height: 20px;
+            float: left;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -10px;
+            text-align: center;
+            line-height: 20px;
+        }
+        #start{
+            margin-left: -80px;
+        }
+        #pause{
+            margin-right: -90px;
+        }
+        .block{
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            float: left;
+        }
+        .snake-block{
+            background-color: red;
+            position: absolute;
+            border:1px solid black;
+            border-radius: 4px;
+        }
+        .food{
+            background-color: blue;
+            position: absolute;
+        }
+        #score{
+            background-color: yellow;
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content"></div>
+        <div id="bottom">
+            <div id="info"> made by Jiachenglong</div>
+            <div id="btn">
+                <span id="start">开始</span>
+                <span id="pause">暂停</span>
+                <span>得分</span>
+                <div id="score"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Snake(){
+            this.length=3;
+            this.body=[];
+            this.color="red";
+            this.position={
+                x:20,
+                y:60
+            };
+            this.className="block snake-block"
+        }
+        Snake.prototype.init=function(){
+            for(var i=0;i<this.length;i++){
+                var oSdiv= document.createElement("div");
+                oSdiv.className=this.className;
+                oSdiv.style.left=this.position.y-i*this.position.x+"px";
+                oSdiv.style.top =this.position.y+"px";
+                this.body.push(oSdiv);
+            }
+        };
+        function Food(){
+            this.color = "blue";
+            this.className="food";
+            this.position = {
+                x:0,
+                y:0
+            }
+            this.dom=null;
+        }
+        Food.prototype.init = function(){
+            this.position.x=parseInt(Math.random*50)*20;
+            this.position.y=parseInt(Math.random*25)*20
+        };
+        function Ground(){
+            this.dom = document.getElementById("content");
+        }
+        function Game(){
+
+        }
+        Game.prototype.start = function(){
+
+        };
+        Game.prototype.pause = function(){
+
+        };
+
+        var ground = new Ground();
+        var snake  = new Snake();
+        snake.init();
+        for(var i=0;i<snake.body.length;i++){
+            ground.dom.appendChild(snake.body[i]);
+        }
+        var food = new Food();
+        food.init();
+        var bFlag=false;
+        do{
+            bFlag=false;
+            for(var i=0;i<snake.body.length;i++){
+                if(snake.body[i].offsetLeft==food.position.x&&snakeBody[i].offsetTop==food.position.y){
+                    bFlag=true;
+                }
+            }
+        }while(bFlag);
+        food.dom = document.createElement("div");
+        oFdiv.className="block food";
+        oFdiv.style.left=iLeft+"px";
+        oFdiv.style.top=iTop+"px";
+        oContent.appendChild(oFdiv);
+
+    </script>
+</body>
+</html>
